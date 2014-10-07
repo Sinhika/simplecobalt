@@ -1,0 +1,20 @@
+[
+{
+"modid": "simplecobalt",
+"name": "Simple Cobalt",
+"description": "Cobalt Ore, with the alloys Blue Drift Steel, Blue Celadon, and Green Celadon.",
+"version": "1.2.1",
+"credits": "Created by akkamaddi, reliant on AleXndrTheGr8st",
+"logoFile": "",
+"mcversion": "",
+"url": "",
+"updateUrl": "",
+"authors": [ "akkamaddi" ],
+"parent":"",
+"screenshots": [],
+"dependencies": [
+"mod_MinecraftForge"
+"mod_simpleores"
+]
+}
+]
