@@ -1,5 +1,26 @@
 package akkamaddi.simplecobalt.code;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
+import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
+import net.minecraft.item.ItemStack;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.common.util.EnumHelper;
+import akkamaddi.akkamaddiCore.api.APIcore;
+import akkamaddi.akkamaddiCore.api.CommonProxy;
+import alexndr.SimpleOres.api.content.SimpleArmor;
+import alexndr.SimpleOres.api.content.SimpleAxe;
+import alexndr.SimpleOres.api.content.SimpleBlock;
+import alexndr.SimpleOres.api.content.SimpleHoe;
+import alexndr.SimpleOres.api.content.SimpleIngot;
+import alexndr.SimpleOres.api.content.SimplePickaxe;
+import alexndr.SimpleOres.api.content.SimpleShovel;
+import alexndr.SimpleOres.api.content.SimpleSword;
+import alexndr.SimpleOres.api.content.SimpleTab;
+import alexndr.SimpleOres.api.helpers.LootHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler; // used in 1.6.2
 import cpw.mods.fml.common.Mod.Instance;
@@ -8,34 +29,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
-import cpw.mods.fml.common.registry.LanguageRegistry;
-import cpw.mods.fml.common.FMLLog;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-import net.minecraft.item.Item;
-import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.item.ItemArmor.ArmorMaterial;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.world.World;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraftforge.common.MinecraftForge;
-import akkamaddi.akkamaddiCore.api.CommonProxy;
-import alexndr.SimpleOres.api.content.SimpleBlock;
-import alexndr.SimpleOres.api.content.SimpleIngot;
-import alexndr.SimpleOres.api.content.SimpleSword;
-import alexndr.SimpleOres.api.content.SimpleShovel;
-import alexndr.SimpleOres.api.content.SimpleAxe;
-import alexndr.SimpleOres.api.content.SimplePickaxe;
-import alexndr.SimpleOres.api.content.SimpleHoe;
-import alexndr.SimpleOres.api.content.SimpleArmor;
-import alexndr.SimpleOres.api.content.SimpleTab;
-import alexndr.SimpleOres.api.helpers.LootHelper;
-import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.common.util.EnumHelper;
 
 @Mod(modid = "simplecobalt", name = "Simple Cobalt, and Cobalt alloys", 
 	version = "1.2.1", 
@@ -507,8 +500,7 @@ public class SimpleCobaltCore
         
         MinecraftForge.EVENT_BUS.register(new HandlerArmor());
         GameRegistry.registerWorldGenerator(new SimpleCobaltGenerator(), 1);
-        MinecraftForge.EVENT_BUS.register(new HandlerJoinWorld());
-
+		APIcore.instance.joinWorldModRegistry.add(new JoinWorldHandler());
     } // end preInit()
 
     @EventHandler // used in 1.6.2
