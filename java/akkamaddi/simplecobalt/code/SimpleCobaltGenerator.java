@@ -2,12 +2,11 @@ package akkamaddi.simplecobalt.code;
 
 import java.util.Random;
 
-import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenMinable;
+import akkamaddi.akkamaddiCore.api.AkkaWorldGenHelper;
 import cpw.mods.fml.common.IWorldGenerator;
-import alexndr.SimpleOres.api.helpers.WorldGenHelper;
 
 public class SimpleCobaltGenerator implements IWorldGenerator
 {
@@ -30,7 +29,8 @@ public class SimpleCobaltGenerator implements IWorldGenerator
             {
                 if (world.provider.dimensionId == SimpleCobaltCore.dimensionIDsArray[i])
                 {
-                    generateHigher(world, random, chunkX * 16, chunkZ * 16, SimpleCobaltCore.dimensionIDsArray[i]);
+					generateHigher(world, random, chunkX * 16, chunkZ * 16,
+							SimpleCobaltCore.dimensionIDsArray[i]);
                 }
             }
         }
@@ -51,10 +51,14 @@ public class SimpleCobaltGenerator implements IWorldGenerator
     {
         for (int x = 0; x < SimpleCobaltCore.cobaltSpawnRate; x++)
         {
-            int Xcoord = blockX + random.nextInt(16);
-            int Ycoord = random.nextInt(SimpleCobaltCore.cobaltSpawnHeight - SimpleCobaltCore.cobaltMinSpawnHeight);
-            int Zcoord = blockZ + random.nextInt(16);
-            new WorldGenHelper(SimpleCobaltCore.oreCobalt.blockID, SimpleCobaltCore.cobaltVeinSize, Block.stone).generate(world, random, Xcoord, Ycoord + SimpleCobaltCore.cobaltMinSpawnHeight , Zcoord);
+			int Xcoord = blockX + random.nextInt(16);
+			int Ycoord = random.nextInt(SimpleCobaltCore.cobaltSpawnHeight
+					- SimpleCobaltCore.cobaltMinSpawnHeight);
+			int Zcoord = blockZ + random.nextInt(16);
+			new AkkaWorldGenHelper(SimpleCobaltCore.oreCobalt,
+					SimpleCobaltCore.cobaltVeinSize, Blocks.stone).generate(
+					world, random, Xcoord, Ycoord
+							+ SimpleCobaltCore.cobaltMinSpawnHeight, Zcoord);
         }
     }
 
@@ -75,13 +79,21 @@ public class SimpleCobaltGenerator implements IWorldGenerator
 
                 for (int x = 0; x < cobaltRate; x++)
                 {
-                    int maxHeight = SimpleCobaltCore.config.get("Higher Dimension ID: " + dimensionID, "Cobalt Maximum Spawn Height", 32).getInt();
-                    int minHeight = SimpleCobaltCore.config.get("Higher Dimension ID: " + dimensionID, "Cobalt Minimum Spawn Height", 0).getInt();
-                    int veinSize = SimpleCobaltCore.config.get("Higher Dimension ID: " + dimensionID, "Cobalt Vein Size", 6).getInt();
-                    int Xcoord = blockX + random.nextInt(16);
-                    int Ycoord = random.nextInt(maxHeight - minHeight);
-                    int Zcoord = blockZ + random.nextInt(16);
-                    new WorldGenHelper(SimpleCobaltCore.oreCobalt.blockID, veinSize, Block.stone).generate(world, random, Xcoord, Ycoord + minHeight, Zcoord);
+					int maxHeight = SimpleCobaltCore.config.get(
+							"Higher Dimension ID: " + dimensionID,
+							"Cobalt Maximum Spawn Height", 32).getInt();
+					int minHeight = SimpleCobaltCore.config.get(
+							"Higher Dimension ID: " + dimensionID,
+							"Cobalt Minimum Spawn Height", 0).getInt();
+					int veinSize = SimpleCobaltCore.config.get(
+							"Higher Dimension ID: " + dimensionID,
+							"Cobalt Vein Size", 6).getInt();
+					int Xcoord = blockX + random.nextInt(16);
+					int Ycoord = random.nextInt(maxHeight - minHeight);
+					int Zcoord = blockZ + random.nextInt(16);
+					new AkkaWorldGenHelper(SimpleCobaltCore.oreCobalt,
+							veinSize, Blocks.stone).generate(world, random,
+							Xcoord, Ycoord + minHeight, Zcoord);
                 }
             }
         }

@@ -2,6 +2,7 @@ package akkamaddi.simplecobalt.code;
 
 import java.util.EnumSet;
 
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
@@ -13,7 +14,7 @@ public class HandlerArmor
 {
     //effects
 
-    @ForgeSubscribe
+    @SubscribeEvent
     public void onFallDamage(LivingAttackEvent event)
     {
         if (event.entity instanceof EntityPlayer)
