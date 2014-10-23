@@ -1,5 +1,7 @@
 package akkamaddi.simplecobalt.code;
 
+import java.io.File;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -31,8 +33,8 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = "simplecobalt", name = "Simple Cobalt, and Cobalt alloys", 
-	version = "1.2.1", 
-	dependencies = "required-after:simpleores ; required-after:required-after:fusionplugin ; required-after:akkamaddicore")
+	version = "1.7.10-1.4.0", 
+	dependencies = "required-after:simpleores ; required-after:fusionplugin ; required-after:akkamaddicore")
 
 public class SimpleCobaltCore
 {
@@ -179,17 +181,21 @@ public class SimpleCobaltCore
     @EventHandler // used in 1.6.2
     public void preInit(FMLPreInitializationEvent event)
     {
-        config = new Configuration(event.getSuggestedConfigurationFile());
+        File installDir = event.getModConfigurationDirectory();
+        File configDir = new File(installDir, "akkamaddi");
+        File configFile = new File(configDir, "simplecobalt.cfg");
+        Configuration config = new Configuration(configFile);
+
         config.load();
         //Adjustable Ore Spawn Rates
-        cobaltSpawnRate = config.get("13. Cobalt Ore Worldgen", "Cobalt Spawn Rate", 6).getInt();
-        cobaltVeinSize = config.get("13. Cobalt Ore Worldgen", "Cobalt Vein Size", 6).getInt();
-        cobaltSpawnHeight = config.get("13. Cobalt Ore Worldgen", "Cobalt Maximum Spawn Height", 32).getInt();
-        cobaltMinSpawnHeight = config.get("13. Cobalt Ore Worldgen", "Cobalt Minimum Spawn Height", 0).getInt();
+        cobaltSpawnRate = config.get("Cobalt Ore Worldgen", "Cobalt Spawn Rate", 6).getInt();
+        cobaltVeinSize = config.get("Cobalt Ore Worldgen", "Cobalt Vein Size", 6).getInt();
+        cobaltSpawnHeight = config.get("Cobalt Ore Worldgen", "Cobalt Maximum Spawn Height", 32).getInt();
+        cobaltMinSpawnHeight = config.get("Cobalt Ore Worldgen", "Cobalt Minimum Spawn Height", 0).getInt();
         //higher dimension
-        enableHigherDimensionGen = config.get("14. Higher World Gen", "Spawn Cobalt in higher dimensions? (Advanced)", false).getBoolean(enableHigherDimensionGen);
+        enableHigherDimensionGen = config.get("Higher World Gen", "Spawn Cobalt in higher dimensions? (Advanced)", false).getBoolean(enableHigherDimensionGen);
         // Recycling
-        enableRecycling = config.get("15. Enable Cobalt Recycling", "Enable Simple Cobalt item recycling recipes: false or true?", false).getBoolean(false);
+        enableRecycling = config.get("Enable Cobalt Recycling", "Enable Simple Cobalt item recycling recipes: false or true?", false).getBoolean(false);
 
         //Higher Dimensions
         if (enableHigherDimensionGen)
