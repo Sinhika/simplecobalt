@@ -149,10 +149,15 @@ public class SimpleCobaltCore
     /**
      * ArmorMaterial. In form ("NAME", max damage (like uses, multiply by pieces for their max damage), new int[] {helmet defense, chestplate defense, leggings defense, boots defense}, enchantability)
      */
-    public static ArmorMaterial armorCobalt = EnumHelper.addArmorMaterial("COBALT", 24, new int[] {3, 4, 3, 3}, 8);
-    public static ArmorMaterial armorBlueDriftSteel = EnumHelper.addArmorMaterial("BLUEDRIFTSTEEL", 26, new int[] {3, 6, 5, 3}, 16);
-    public static ArmorMaterial armorBlueCeladon = EnumHelper.addArmorMaterial("BLUECELADON", 30, new int[] {4, 6, 5, 4}, 24);
-    public static ArmorMaterial armorGreenCeladon = EnumHelper.addArmorMaterial("GREENCELADON", 44, new int[] {5, 9, 8, 5}, 26);
+	public static ArmorMaterial armorCobalt = EnumHelper.addArmorMaterial(
+			"COBALT", 24, new int[] { 3, 4, 3, 3 }, 8);
+	public static ArmorMaterial armorBlueDriftSteel = EnumHelper
+			.addArmorMaterial("BLUEDRIFTSTEEL", 26, new int[] { 3, 6, 5, 3 },
+					16);
+	public static ArmorMaterial armorBlueCeladon = EnumHelper.addArmorMaterial(
+			"BLUECELADON", 30, new int[] { 4, 6, 5, 4 }, 24);
+	public static ArmorMaterial armorGreenCeladon = EnumHelper
+			.addArmorMaterial("GREENCELADON", 44, new int[] { 5, 9, 8, 5 }, 26);
 
     /**
      * Creating the Armor Renderers. This is simply so you can see the armor texture when you wear it.
@@ -164,10 +169,14 @@ public class SimpleCobaltCore
 
     // set tool properties
     // ToolMaterial. In form ("NAME", mining level, max uses, speed, damage to entity, enchantability)
-    public static ToolMaterial toolCobalt = EnumHelper.addToolMaterial("COBALT", 2, 960, 7.0F, 2, 8);
-    public static ToolMaterial toolBlueDriftSteel = EnumHelper.addToolMaterial("BLUEDRIFTSTEEL", 2, 1240, 13.0F, 2, 16);
-    public static ToolMaterial toolBlueCeladon = EnumHelper.addToolMaterial("BLUECELADON", 3, 1740, 20.0F, 5, 24);
-    public static ToolMaterial toolGreenCeladon = EnumHelper.addToolMaterial("GREENCELADON", 4, 2120, 24.0F, 6, 26);
+	public static ToolMaterial toolCobalt = EnumHelper.addToolMaterial(
+			"COBALT", 2, 960, 7.0F, 2, 8);
+	public static ToolMaterial toolBlueDriftSteel = EnumHelper.addToolMaterial(
+			"BLUEDRIFTSTEEL", 2, 1240, 13.0F, 2, 16);
+	public static ToolMaterial toolBlueCeladon = EnumHelper.addToolMaterial(
+			"BLUECELADON", 3, 1740, 20.0F, 5, 24);
+	public static ToolMaterial toolGreenCeladon = EnumHelper.addToolMaterial(
+			"GREENCELADON", 4, 2120, 24.0F, 6, 26);
 
     // Tab
     public void setTabIcons()
@@ -188,10 +197,14 @@ public class SimpleCobaltCore
 
         config.load();
         //Adjustable Ore Spawn Rates
-        cobaltSpawnRate = config.get("Cobalt Ore Worldgen", "Cobalt Spawn Rate", 6).getInt();
-        cobaltVeinSize = config.get("Cobalt Ore Worldgen", "Cobalt Vein Size", 6).getInt();
-        cobaltSpawnHeight = config.get("Cobalt Ore Worldgen", "Cobalt Maximum Spawn Height", 32).getInt();
-        cobaltMinSpawnHeight = config.get("Cobalt Ore Worldgen", "Cobalt Minimum Spawn Height", 0).getInt();
+		cobaltSpawnRate = config.get("Cobalt Ore Worldgen",
+				"Cobalt Spawn Rate", 6).getInt();
+		cobaltVeinSize = config.get("Cobalt Ore Worldgen", "Cobalt Vein Size",
+				6).getInt();
+		cobaltSpawnHeight = config.get("Cobalt Ore Worldgen",
+				"Cobalt Maximum Spawn Height", 32).getInt();
+		cobaltMinSpawnHeight = config.get("Cobalt Ore Worldgen",
+				"Cobalt Minimum Spawn Height", 0).getInt();
         //higher dimension
         enableHigherDimensionGen = config.get("Higher World Gen", "Spawn Cobalt in higher dimensions? (Advanced)", false).getBoolean(enableHigherDimensionGen);
         // Recycling
