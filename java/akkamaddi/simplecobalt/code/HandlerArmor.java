@@ -20,7 +20,9 @@ public class HandlerArmor
             EntityPlayer player = (EntityPlayer)event.entity;
 			ItemStack [] armorbits = new ItemStack[4];
 			SimpleArmorWithEffect.getArmorPieces(player, armorbits);
-
+			for (int i=0; i < 4; i++) {
+				if (armorbits[i] == null) return;
+			}
 			if (armorbits[ARMOR_TYPE.HELM.ordinal()].getItem() == SimpleCobaltCore.blueDriftSteelHelm
 					&& armorbits[ARMOR_TYPE.CHEST.ordinal()].getItem() == SimpleCobaltCore.blueDriftSteelChest
 					&& armorbits[ARMOR_TYPE.LEGS.ordinal()].getItem() == SimpleCobaltCore.blueDriftSteelLegs
