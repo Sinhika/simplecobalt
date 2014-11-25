@@ -32,123 +32,121 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "simplecobalt", name = "Simple Cobalt, and Cobalt alloys", 
-	version = "1.7.10-1.4.1", 
-	dependencies = "required-after:simpleores ; required-after:fusionplugin ; required-after:akkamaddicore")
+@Mod(modid = "simplecobalt", name = "Simple Cobalt, and Cobalt alloys", version = "1.7.10-1.4.2", dependencies = "required-after:simpleores ; required-after:fusionplugin ; required-after:akkamaddicore")
+public class SimpleCobaltCore {
+	// The instance of your mod that Forge uses.
+	@Instance("simplecobalt")
+	public static SimpleCobaltCore instance;
 
-public class SimpleCobaltCore
-{
-    // The instance of your mod that Forge uses.
-    @Instance("simplecobalt")
-    public static SimpleCobaltCore instance;
+	// Says where the client and server 'proxy' code is loaded.
+	@SidedProxy(clientSide = "akkamaddi.simplecobalt.code.ClientProxy", serverSide = "akkamaddi.akkamaddiCore.api.CommonProxy")
+	public static CommonProxy proxy;
 
-    // Says where the client and server 'proxy' code is loaded.
-    @SidedProxy(clientSide = "akkamaddi.simplecobalt.code.ClientProxy", 
-    			serverSide = "akkamaddi.akkamaddiCore.api.CommonProxy")
-    public static CommonProxy proxy;
+	// set item ID, to-from config file
 
-    // set item ID, to-from config file
+	// set actual item names
 
+	// Cobalt
+	public static Item cobaltIngot;
 
-    // set actual item names
+	public static Item cobaltSword;
+	public static Item cobaltShovel;
+	public static Item cobaltAxe;
+	public static Item cobaltPickaxe;
+	public static Item cobaltHoe;
 
-    //Cobalt
-    public static Item cobaltIngot;
+	public static Item cobaltHelm;
+	public static Item cobaltChest;
+	public static Item cobaltLegs;
+	public static Item cobaltBoots;
 
-    public static Item cobaltSword;
-    public static Item cobaltShovel;
-    public static Item cobaltAxe;
-    public static Item cobaltPickaxe;
-    public static Item cobaltHoe;
+	// set block names
+	public static Block blockCobalt;
+	public static Block oreCobalt;
 
-    public static Item cobaltHelm;
-    public static Item cobaltChest;
-    public static Item cobaltLegs;
-    public static Item cobaltBoots;
+	// spawning
+	public static int cobaltSpawnRate;
+	public static int cobaltVeinSize;
+	public static int cobaltSpawnHeight;
+	public static int cobaltMinSpawnHeight;
 
-    // set block names
-    public static Block blockCobalt;
-    public static Block oreCobalt;
+	// Blue DriftSteel
+	public static Item blueDriftSteelIngot;
+	public static Item smallBlueDriftSteelChunkItem;
+	public static Item mediumBlueDriftSteelChunkItem;
+	public static Item largeBlueDriftSteelChunkItem;
 
-    // spawning
-    public static int cobaltSpawnRate;
-    public static int cobaltVeinSize;
-    public static int cobaltSpawnHeight;
-    public static int cobaltMinSpawnHeight;
+	public static Item blueDriftSteelSword;
+	public static Item blueDriftSteelShovel;
+	public static Item blueDriftSteelAxe;
+	public static Item blueDriftSteelPickaxe;
+	public static Item blueDriftSteelHoe;
 
-    //Blue DriftSteel
-    public static Item blueDriftSteelIngot;
-    public static Item smallBlueDriftSteelChunkItem;
-    public static Item mediumBlueDriftSteelChunkItem;
-    public static Item largeBlueDriftSteelChunkItem;
+	public static Item blueDriftSteelHelm;
+	public static Item blueDriftSteelChest;
+	public static Item blueDriftSteelLegs;
+	public static Item blueDriftSteelBoots;
 
-    public static Item blueDriftSteelSword;
-    public static Item blueDriftSteelShovel;
-    public static Item blueDriftSteelAxe;
-    public static Item blueDriftSteelPickaxe;
-    public static Item blueDriftSteelHoe;
+	public static Block blockBlueDriftSteel;
 
-    public static Item blueDriftSteelHelm;
-    public static Item blueDriftSteelChest;
-    public static Item blueDriftSteelLegs;
-    public static Item blueDriftSteelBoots;
+	// Blue Celadon
+	public static Item blueCeladonIngot;
+	public static Item smallBlueCeladonChunkItem;
+	public static Item mediumBlueCeladonChunkItem;
+	public static Item largeBlueCeladonChunkItem;
 
-    public static Block blockBlueDriftSteel;
+	public static Item blueCeladonSword;
+	public static Item blueCeladonShovel;
+	public static Item blueCeladonAxe;
+	public static Item blueCeladonPickaxe;
+	public static Item blueCeladonHoe;
 
-    //Blue Celadon
-    public static Item blueCeladonIngot;
-    public static Item smallBlueCeladonChunkItem;
-    public static Item mediumBlueCeladonChunkItem;
-    public static Item largeBlueCeladonChunkItem;
+	public static Item blueCeladonHelm;
+	public static Item blueCeladonChest;
+	public static Item blueCeladonLegs;
+	public static Item blueCeladonBoots;
 
-    public static Item blueCeladonSword;
-    public static Item blueCeladonShovel;
-    public static Item blueCeladonAxe;
-    public static Item blueCeladonPickaxe;
-    public static Item blueCeladonHoe;
+	public static Block blockBlueCeladon;
 
-    public static Item blueCeladonHelm;
-    public static Item blueCeladonChest;
-    public static Item blueCeladonLegs;
-    public static Item blueCeladonBoots;
+	// Green Celadon
+	public static Item greenCeladonIngot;
+	public static Item smallGreenCeladonChunkItem;
+	public static Item mediumGreenCeladonChunkItem;
+	public static Item largeGreenCeladonChunkItem;
 
-    public static Block blockBlueCeladon;
+	public static Item greenCeladonSword;
+	public static Item greenCeladonShovel;
+	public static Item greenCeladonAxe;
+	public static Item greenCeladonPickaxe;
+	public static Item greenCeladonHoe;
 
-    //Green Celadon
-    public static Item greenCeladonIngot;
-    public static Item smallGreenCeladonChunkItem;
-    public static Item mediumGreenCeladonChunkItem;
-    public static Item largeGreenCeladonChunkItem;
+	public static Item greenCeladonHelm;
+	public static Item greenCeladonChest;
+	public static Item greenCeladonLegs;
+	public static Item greenCeladonBoots;
 
-    public static Item greenCeladonSword;
-    public static Item greenCeladonShovel;
-    public static Item greenCeladonAxe;
-    public static Item greenCeladonPickaxe;
-    public static Item greenCeladonHoe;
+	public static Block blockGreenCeladon;
 
-    public static Item greenCeladonHelm;
-    public static Item greenCeladonChest;
-    public static Item greenCeladonLegs;
-    public static Item greenCeladonBoots;
+	// config
+	public static Configuration config;
 
-    public static Block blockGreenCeladon;
+	// boolean
+	public static boolean enableHigherDimensionGen;
+	public static boolean enableRecycling;
+	public static boolean itemizeMobs;
 
-    // config
-    public static Configuration config;
+	// Higher Dimensions
+	public static int[] dimensionIDsArray;
 
-    //boolean
-    public static boolean enableHigherDimensionGen;
-    public static boolean enableRecycling;
+	// tab
+	public static SimpleTab tabAkkamaddiCobalt = new SimpleTab(
+			"tabAkkamaddiCobalt");
 
-    //Higher Dimensions
-    public static int[] dimensionIDsArray;
-
-    // tab
-    public static SimpleTab tabAkkamaddiCobalt = new SimpleTab("tabAkkamaddiCobalt");
-
-    /**
-     * ArmorMaterial. In form ("NAME", max damage (like uses, multiply by pieces for their max damage), new int[] {helmet defense, chestplate defense, leggings defense, boots defense}, enchantability)
-     */
+	/**
+	 * ArmorMaterial. In form ("NAME", max damage (like uses, multiply by pieces
+	 * for their max damage), new int[] {helmet defense, chestplate defense,
+	 * leggings defense, boots defense}, enchantability)
+	 */
 	public static ArmorMaterial armorCobalt = EnumHelper.addArmorMaterial(
 			"COBALT", 24, new int[] { 3, 4, 3, 3 }, 8);
 	public static ArmorMaterial armorBlueDriftSteel = EnumHelper
@@ -159,16 +157,18 @@ public class SimpleCobaltCore
 	public static ArmorMaterial armorGreenCeladon = EnumHelper
 			.addArmorMaterial("GREENCELADON", 44, new int[] { 5, 9, 8, 5 }, 26);
 
-    /**
-     * Creating the Armor Renderers. This is simply so you can see the armor texture when you wear it.
-     */
-    public static int rendererCobalt;
-    public static int rendererBlueDriftSteel;
-    public static int rendererBlueCeladon;
-    public static int rendererGreenCeladon;
+	/**
+	 * Creating the Armor Renderers. This is simply so you can see the armor
+	 * texture when you wear it.
+	 */
+	public static int rendererCobalt;
+	public static int rendererBlueDriftSteel;
+	public static int rendererBlueCeladon;
+	public static int rendererGreenCeladon;
 
-    // set tool properties
-    // ToolMaterial. In form ("NAME", mining level, max uses, speed, damage to entity, enchantability)
+	// set tool properties
+	// ToolMaterial. In form ("NAME", mining level, max uses, speed, damage to
+	// entity, enchantability)
 	public static ToolMaterial toolCobalt = EnumHelper.addToolMaterial(
 			"COBALT", 2, 960, 7.0F, 2, 8);
 	public static ToolMaterial toolBlueDriftSteel = EnumHelper.addToolMaterial(
@@ -178,16 +178,16 @@ public class SimpleCobaltCore
 	public static ToolMaterial toolGreenCeladon = EnumHelper.addToolMaterial(
 			"GREENCELADON", 4, 2120, 24.0F, 6, 26);
 
-    // Tab
-    public void setTabIcons()
-    {
-        /**
-         * Creating the custom tabs using the API class "SimpleTab" and setting their icon.
-         */
-        tabAkkamaddiCobalt.setIcon(new ItemStack(SimpleCobaltCore.oreCobalt));
-    }
+	// Tab
+	public void setTabIcons() {
+		/**
+		 * Creating the custom tabs using the API class "SimpleTab" and setting
+		 * their icon.
+		 */
+		tabAkkamaddiCobalt.setIcon(new ItemStack(SimpleCobaltCore.oreCobalt));
+	}
 
-    @EventHandler // used in 1.6.2
+	@EventHandler // used in 1.6.2
     public void preInit(FMLPreInitializationEvent event)
     {
         File installDir = event.getModConfigurationDirectory();
@@ -208,8 +208,11 @@ public class SimpleCobaltCore
         //higher dimension
         enableHigherDimensionGen = config.get("Higher World Gen", "Spawn Cobalt in higher dimensions? (Advanced)", false).getBoolean(enableHigherDimensionGen);
         // Recycling
-        enableRecycling = config.get("Enable Cobalt Recycling", "Enable Simple Cobalt item recycling recipes: false or true?", false).getBoolean(false);
-
+       enableRecycling = config.get(Configuration.CATEGORY_GENERAL, 
+    		   "Enable Simple Cobalt item recycling recipes: false or true?", false).getBoolean(false);
+        itemizeMobs = config.get(Configuration.CATEGORY_GENERAL, 
+        		"Equip mobs with Cobalt gear, true or false", false).getBoolean(false);
+        		
         //Higher Dimensions
         if (enableHigherDimensionGen)
         {
@@ -519,18 +522,20 @@ public class SimpleCobaltCore
         
         MinecraftForge.EVENT_BUS.register(new HandlerArmor());
         GameRegistry.registerWorldGenerator(new SimpleCobaltGenerator(), 1);
-		APIcore.instance.joinWorldModRegistry.add(new JoinWorldHandler());
+        if (itemizeMobs) {
+        	APIcore.instance.joinWorldModRegistry.add(new JoinWorldHandler());
+        }
     } // end preInit()
 
-    @EventHandler // used in 1.6.2
-    public void load(FMLInitializationEvent event)
-    {
-        proxy.registerRenderers();
-     }
+	@EventHandler
+	// used in 1.6.2
+	public void load(FMLInitializationEvent event) {
+		proxy.registerRenderers();
+	}
 
-    @EventHandler // used in 1.6.2
-    public void postInit(FMLPostInitializationEvent event)
-    {
-        // Stub Method
-    }
+	@EventHandler
+	// used in 1.6.2
+	public void postInit(FMLPostInitializationEvent event) {
+		// Stub Method
+	}
 }
