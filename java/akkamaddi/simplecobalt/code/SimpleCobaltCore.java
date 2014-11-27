@@ -208,7 +208,7 @@ public class SimpleCobaltCore {
         //higher dimension
         enableHigherDimensionGen = config.get("Higher World Gen", "Spawn Cobalt in higher dimensions? (Advanced)", false).getBoolean(enableHigherDimensionGen);
         // Recycling
-       enableRecycling = config.get(Configuration.CATEGORY_GENERAL, 
+        enableRecycling = config.get(Configuration.CATEGORY_GENERAL, 
     		   "Enable Simple Cobalt item recycling recipes: false or true?", false).getBoolean(false);
         itemizeMobs = config.get(Configuration.CATEGORY_GENERAL, 
         		"Equip mobs with Cobalt gear, true or false", false).getBoolean(false);
@@ -451,11 +451,15 @@ public class SimpleCobaltCore {
         
         //blocks
         blockCobalt.setHarvestLevel( "pickaxe", 0);
+        ((SimpleBlock) blockCobalt).setAsBeaconBase(true);
         oreCobalt.setHarvestLevel( "pickaxe", 2);
         blockBlueDriftSteel.setHarvestLevel( "pickaxe", 0);
+        ((SimpleBlock) blockBlueDriftSteel).setAsBeaconBase(true);
         blockBlueCeladon.setHarvestLevel( "pickaxe", 0);
+        ((SimpleBlock) blockBlueCeladon).setAsBeaconBase(true);
         blockGreenCeladon.setHarvestLevel( "pickaxe", 0);
-
+        ((SimpleBlock) blockGreenCeladon).setAsBeaconBase(true);
+        
         armorCobalt.customCraftingMaterial = SimpleCobaltCore.cobaltIngot;
         armorBlueDriftSteel.customCraftingMaterial = SimpleCobaltCore.blueDriftSteelIngot;
         armorBlueCeladon.customCraftingMaterial = SimpleCobaltCore.blueCeladonIngot;

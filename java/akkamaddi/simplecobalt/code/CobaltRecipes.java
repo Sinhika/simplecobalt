@@ -21,6 +21,7 @@ public class CobaltRecipes
         OreDictionary.registerOre("ingotBlueDriftSteel", new ItemStack(SimpleCobaltCore.blueDriftSteelIngot));
         OreDictionary.registerOre("ingotBlueCeladon", new ItemStack(SimpleCobaltCore.blueCeladonIngot));
         OreDictionary.registerOre("ingotGreenCeladon", new ItemStack(SimpleCobaltCore.greenCeladonIngot));
+        
         // recipes: Crafting
         //Storage Block
         GameRegistry.addRecipe(new ItemStack(SimpleCobaltCore.blockCobalt, 1), new Object[] {"AAA", "AAA", "AAA", 'A', SimpleCobaltCore.cobaltIngot});
