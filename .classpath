@@ -5,6 +5,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/akkamaddiCore"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ForgeSrc"/>
-	<classpathentry kind="lib" path="C:/Projects/Minecraft_17/lib/[1.7.10] SimpleOres 2   Plugins v1.4.3 .jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SimpleCore"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
