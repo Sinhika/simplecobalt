@@ -1,4 +1,4 @@
-package akkamaddi.simplecobalt.code;
+package akkamaddi.plugins.simplecobalt;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
@@ -23,10 +23,10 @@ public class HandlerArmor
 			for (int i=0; i < 4; i++) {
 				if (armorbits[i] == null) return;
 			}
-			if (armorbits[ARMOR_TYPE.HELM.ordinal()].getItem() == SimpleCobaltCore.blueDriftSteelHelm
-					&& armorbits[ARMOR_TYPE.CHEST.ordinal()].getItem() == SimpleCobaltCore.blueDriftSteelChest
-					&& armorbits[ARMOR_TYPE.LEGS.ordinal()].getItem() == SimpleCobaltCore.blueDriftSteelLegs
-					&& armorbits[ARMOR_TYPE.BOOTS.ordinal()].getItem() == SimpleCobaltCore.blueDriftSteelBoots) 
+			if (armorbits[ARMOR_TYPE.HELM.ordinal()].getItem() == SimpleCobalt.blueDriftSteelHelm
+					&& armorbits[ARMOR_TYPE.CHEST.ordinal()].getItem() == SimpleCobalt.blueDriftSteelChest
+					&& armorbits[ARMOR_TYPE.LEGS.ordinal()].getItem() == SimpleCobalt.blueDriftSteelLegs
+					&& armorbits[ARMOR_TYPE.BOOTS.ordinal()].getItem() == SimpleCobalt.blueDriftSteelBoots) 
 			{
 				if (event.source.equals(DamageSource.fall)) {
 					event.setCanceled(true);

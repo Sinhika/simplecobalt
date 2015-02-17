@@ -1,7 +1,6 @@
-package akkamaddi.simplecobalt.code;
+package akkamaddi.plugins.simplecobalt;
 
 import java.io.File;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
@@ -11,8 +10,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
-import akkamaddi.akkamaddiCore.api.APIcore;
-import akkamaddi.akkamaddiCore.api.CommonProxy;
 import alexndr.SimpleOres.api.content.SimpleArmor;
 import alexndr.SimpleOres.api.content.SimpleAxe;
 import alexndr.SimpleOres.api.content.SimpleBlock;
@@ -32,19 +29,18 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 
-@Mod(modid = "simplecobalt", name = "Simple Cobalt, and Cobalt alloys", version = "1.7.10-1.4.2", dependencies = "required-after:simpleores ; required-after:fusionplugin ; required-after:akkamaddicore")
-public class SimpleCobaltCore {
-	// The instance of your mod that Forge uses.
-	@Instance("simplecobalt")
-	public static SimpleCobaltCore instance;
+@Mod(modid = ModInfo.ID, name = ModInfo.NAME, 
+	version = ModInfo.VERSION, 
+	dependencies = "required-after:simplecore; required-after:simpleores ; required-after:fusion ; required-after:akkamaddicore")
+public class SimpleCobalt 
+{
+//	// The instance of your mod that Forge uses.
+//	@Instance("simplecobalt")
+//	public static SimpleCobalt instance;
 
-	// Says where the client and server 'proxy' code is loaded.
-	@SidedProxy(clientSide = "akkamaddi.simplecobalt.code.ClientProxy", serverSide = "akkamaddi.akkamaddiCore.api.CommonProxy")
-	public static CommonProxy proxy;
-
-	// set item ID, to-from config file
-
-	// set actual item names
+//	// Says where the client and server 'proxy' code is loaded.
+//	@SidedProxy(clientSide = "akkamaddi.simplecobalt.code.ClientProxy", serverSide = "akkamaddi.akkamaddiCore.api.CommonProxy")
+//	public static CommonProxy proxy;
 
 	// Cobalt
 	public static Item cobaltIngot;
@@ -184,7 +180,7 @@ public class SimpleCobaltCore {
 		 * Creating the custom tabs using the API class "SimpleTab" and setting
 		 * their icon.
 		 */
-		tabAkkamaddiCobalt.setIcon(new ItemStack(SimpleCobaltCore.oreCobalt));
+		tabAkkamaddiCobalt.setIcon(new ItemStack(SimpleCobalt.oreCobalt));
 	}
 
 	@EventHandler // used in 1.6.2
@@ -242,210 +238,210 @@ public class SimpleCobaltCore {
         // define items
         // Cobalt
 		cobaltIngot = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("cobaltIngot");
 		cobaltSword = new SimpleSword(toolCobalt).modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("cobaltSword");
 		cobaltShovel = new SimpleShovel(toolCobalt).modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("cobaltShovel");
 		cobaltAxe = new SimpleAxe(toolCobalt).modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("cobaltAxe");
 		cobaltPickaxe = new SimplePickaxe(toolCobalt).modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("cobaltPickaxe");
 		cobaltHoe = new SimpleHoe(toolCobalt).modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("cobaltHoe");
 		cobaltHelm = new SimpleArmor(armorCobalt, rendererCobalt, 0)
 				.modId("simplecobalt").setType("cobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("cobaltHelm");
 		cobaltChest = new SimpleArmor(armorCobalt, rendererCobalt, 1)
 				.modId("simplecobalt").setType("cobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("cobaltChest");
 		cobaltLegs = new SimpleArmor(armorCobalt, rendererCobalt, 2)
 				.modId("simplecobalt").setType("cobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("cobaltLegs");
 		cobaltBoots = new SimpleArmor(armorCobalt, rendererCobalt, 3)
 				.modId("simplecobalt").setType("cobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("cobaltBoots");
         // Blue Drift Steel
 		blueDriftSteelIngot = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelIngot");
 		smallBlueDriftSteelChunkItem = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("smallBlueDriftSteelChunkItem");
 		mediumBlueDriftSteelChunkItem = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("mediumBlueDriftSteelChunkItem");
 		largeBlueDriftSteelChunkItem = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("largeBlueDriftSteelChunkItem");
 		blueDriftSteelSword = new SimpleSword(toolBlueDriftSteel)
 				.modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelSword");
 		blueDriftSteelShovel = new SimpleShovel(toolBlueDriftSteel)
 				.modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelShovel");
 		blueDriftSteelAxe = new SimpleAxe(toolBlueDriftSteel)
 				.modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelAxe");
 		blueDriftSteelPickaxe = new SimplePickaxe(toolBlueDriftSteel)
 				.modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelPickaxe");
 		blueDriftSteelHoe = new SimpleHoe(toolBlueDriftSteel)
 				.modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelHoe");
 		blueDriftSteelHelm = new SimpleArmor(armorBlueDriftSteel,
 				rendererBlueDriftSteel, 0).modId("simplecobalt")
 				.setType("bluedriftsteel")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelHelm");
 		blueDriftSteelChest = new SimpleArmor(armorBlueDriftSteel,
 				rendererBlueDriftSteel, 1).modId("simplecobalt")
 				.setType("bluedriftsteel")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelChest");
 		blueDriftSteelLegs = new SimpleArmor(armorBlueDriftSteel,
 				rendererBlueDriftSteel, 2).modId("simplecobalt")
 				.setType("bluedriftsteel")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelLegs");
 		blueDriftSteelBoots = new SimpleArmor(armorBlueDriftSteel,
 				rendererBlueDriftSteel, 3).modId("simplecobalt")
 				.setType("bluedriftsteel")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelBoots");
         // Blue Celadon
 		blueCeladonIngot = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonIngot");
 		smallBlueCeladonChunkItem = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("smallBlueCeladonChunkItem");
 		mediumBlueCeladonChunkItem = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("mediumBlueCeladonChunkItem");
 		largeBlueCeladonChunkItem = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("largeBlueCeladonChunkItem");
 		blueCeladonSword = new SimpleSword(toolBlueCeladon)
 				.modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonSword");
 		blueCeladonShovel = new SimpleShovel(toolBlueCeladon)
 				.modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonShovel");
 		blueCeladonAxe = new SimpleAxe(toolBlueCeladon).modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonAxe");
 		blueCeladonPickaxe = new SimplePickaxe(toolBlueCeladon)
 				.modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonPickaxe");
 		blueCeladonHoe = new SimpleHoe(toolBlueCeladon).modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonHoe");
 		blueCeladonHelm = new SimpleArmor(armorBlueCeladon, rendererCobalt, 0)
 				.modId("simplecobalt").setType("blueceladon")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonHelm");
 		blueCeladonChest = new SimpleArmor(armorBlueCeladon, rendererCobalt, 1)
 				.modId("simplecobalt").setType("blueceladon")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonChest");
 		blueCeladonLegs = new SimpleArmor(armorBlueCeladon, rendererCobalt, 2)
 				.modId("simplecobalt").setType("blueceladon")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonLegs");
 		blueCeladonBoots = new SimpleArmor(armorBlueCeladon, rendererCobalt, 3)
 				.modId("simplecobalt").setType("blueceladon")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonBoots");
         // Green Celadon
 		greenCeladonIngot = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonIngot");
 		smallGreenCeladonChunkItem = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("smallGreenCeladonChunkItem");
 		mediumGreenCeladonChunkItem = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("mediumGreenCeladonChunkItem");
 		largeGreenCeladonChunkItem = new SimpleIngot().modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("largeGreenCeladonChunkItem");
 		greenCeladonSword = new SimpleSword(toolGreenCeladon)
 				.modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonSword");
 		greenCeladonShovel = new SimpleShovel(toolGreenCeladon)
 				.modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonShovel");
 		greenCeladonAxe = new SimpleAxe(toolGreenCeladon).modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonAxe");
 		greenCeladonPickaxe = new SimplePickaxe(toolGreenCeladon)
 				.modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonPickaxe");
 		greenCeladonHoe = new SimpleHoe(toolGreenCeladon).modId("simplecobalt")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonHoe");
 		greenCeladonHelm = new SimpleArmor(armorGreenCeladon, rendererCobalt, 0)
 				.modId("simplecobalt").setType("greenceladon")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonHelm");
 		greenCeladonChest = new SimpleArmor(armorGreenCeladon, rendererCobalt,
 				1).modId("simplecobalt").setType("greenceladon")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonChest");
 		greenCeladonLegs = new SimpleArmor(armorGreenCeladon, rendererCobalt, 2)
 				.modId("simplecobalt").setType("greenceladon")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonLegs");
 		greenCeladonBoots = new SimpleArmor(armorGreenCeladon, rendererCobalt,
 				3).modId("simplecobalt").setType("greenceladon")
-				.setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonBoots");
 
         // define blocks
         blockCobalt = new SimpleBlock( Material.iron)
-        .modId("simplecobalt").setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+        .modId("simplecobalt").setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
         .setHardness(10.0F).setResistance(22.0F).setStepSound(Block.soundTypeMetal)
         .setBlockName("blockCobalt");
 
         oreCobalt = new SimpleBlock( Material.iron)
-        .modId("simplecobalt").setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+        .modId("simplecobalt").setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
         .setHardness(4.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal)
         .setBlockName("oreCobalt");
 
         blockBlueDriftSteel = new SimpleBlock( Material.iron)
-        .modId("simplecobalt").setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+        .modId("simplecobalt").setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
         .setHardness(10.0F).setResistance(22.0F).setStepSound(Block.soundTypeMetal)
         .setBlockName("blockBlueDriftSteel").setLightLevel(1.0F);
 
         blockBlueCeladon = new SimpleBlock(Material.iron)
-        .modId("simplecobalt").setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+        .modId("simplecobalt").setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
         .setHardness(10.0F).setResistance(22.0F).setStepSound(Block.soundTypeMetal)
         .setBlockName("blockBlueCeladon");
 
         blockGreenCeladon = new SimpleBlock( Material.iron)
-        .modId("simplecobalt").setCreativeTab(SimpleCobaltCore.tabAkkamaddiCobalt)
+        .modId("simplecobalt").setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
         .setHardness(10.0F).setResistance(22.0F).setStepSound(Block.soundTypeMetal)
         .setBlockName("blockGreenCeladon");
         
@@ -460,14 +456,14 @@ public class SimpleCobaltCore {
         blockGreenCeladon.setHarvestLevel( "pickaxe", 0);
         ((SimpleBlock) blockGreenCeladon).setAsBeaconBase(true);
         
-        armorCobalt.customCraftingMaterial = SimpleCobaltCore.cobaltIngot;
-        armorBlueDriftSteel.customCraftingMaterial = SimpleCobaltCore.blueDriftSteelIngot;
-        armorBlueCeladon.customCraftingMaterial = SimpleCobaltCore.blueCeladonIngot;
-        armorGreenCeladon.customCraftingMaterial = SimpleCobaltCore.greenCeladonIngot;
-        toolCobalt.customCraftingMaterial = SimpleCobaltCore.cobaltIngot;
-        toolBlueDriftSteel.customCraftingMaterial = SimpleCobaltCore.blueDriftSteelIngot;
-        toolBlueCeladon.customCraftingMaterial = SimpleCobaltCore.blueCeladonIngot;
-        toolGreenCeladon.customCraftingMaterial = SimpleCobaltCore.greenCeladonIngot;
+        armorCobalt.customCraftingMaterial = SimpleCobalt.cobaltIngot;
+        armorBlueDriftSteel.customCraftingMaterial = SimpleCobalt.blueDriftSteelIngot;
+        armorBlueCeladon.customCraftingMaterial = SimpleCobalt.blueCeladonIngot;
+        armorGreenCeladon.customCraftingMaterial = SimpleCobalt.greenCeladonIngot;
+        toolCobalt.customCraftingMaterial = SimpleCobalt.cobaltIngot;
+        toolBlueDriftSteel.customCraftingMaterial = SimpleCobalt.blueDriftSteelIngot;
+        toolBlueCeladon.customCraftingMaterial = SimpleCobalt.blueCeladonIngot;
+        toolGreenCeladon.customCraftingMaterial = SimpleCobalt.greenCeladonIngot;
 
          // loot
         LootHelper.addLoot("villageBlacksmith", new ItemStack(cobaltIngot), 2, 4, 6);
@@ -519,7 +515,7 @@ public class SimpleCobaltCore {
         LootHelper.addLoot("pyramidJungleChest", new ItemStack(greenCeladonLegs), 1, 5, 1);
         LootHelper.addLoot("pyramidJungleChest", new ItemStack(greenCeladonBoots), 1, 5, 1);
         //recipes
-        CobaltRecipes.doCobaltRecipes();
+        Recipes.doCobaltRecipes();
 
         // run tab icon call
         setTabIcons();
