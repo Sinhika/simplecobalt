@@ -4,7 +4,7 @@ sourceSets.main {
 	srcDirs project.projectDir.getPath() exclude ("bin/**", "build*",".gradle/**","eclipse/**")
 	}
     resources {
-	srcDirs '/resources' exclude ("bin/**", "build*",".gradle/**","eclipse/**")
+	srcDirs 'resources' exclude ("bin/**", "build*",".gradle/**","eclipse/**")
 	}
 } 
 
