@@ -182,56 +182,56 @@ public class Content
 		
 		blueDriftSteelHelm = new SimpleArmor(
 				SimpleCobalt.armorBlueDriftSteel, 0).modId("simplecobalt")
-				.setType("tungstencarbide")
+				.setType("bluedriftsteel")
 				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelHelm");
 		blueDriftSteelChest = new SimpleArmor(
 				SimpleCobalt.armorBlueDriftSteel, 1).modId("simplecobalt")
-				.setType("tungstencarbide")
+				.setType("bluedriftsteel")
 				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelChest");
 		blueDriftSteelLegs = new SimpleArmor(
 				SimpleCobalt.armorBlueDriftSteel, 2).modId("simplecobalt")
-				.setType("tungstencarbide")
+				.setType("bluedriftsteel")
 				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelLegs");
 		blueDriftSteelBoots = new SimpleArmor(
 				SimpleCobalt.armorBlueDriftSteel, 3).modId("simplecobalt")
-				.setType("tungstencarbide")
+				.setType("bluedriftsteel")
 				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueDriftSteelBoots");
 
 		blueCeladonHelm = new SimpleArmor(SimpleCobalt.armorBlueCeladon, 0)
-				.modId("simplecobalt").setType("blueCeladon")
+				.modId("simplecobalt").setType("blueceladon")
 				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonHelm");
 		blueCeladonChest = new SimpleArmor(SimpleCobalt.armorBlueCeladon, 1)
-				.modId("simplecobalt").setType("blueCeladon")
+				.modId("simplecobalt").setType("blueceladon")
 				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonChest");
 		blueCeladonLegs = new SimpleArmor(SimpleCobalt.armorBlueCeladon, 2)
-				.modId("simplecobalt").setType("blueCeladon")
+				.modId("simplecobalt").setType("blueceladon")
 				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonLegs");
 		blueCeladonBoots = new SimpleArmor(SimpleCobalt.armorBlueCeladon, 3)
-				.modId("simplecobalt").setType("blueCeladon")
+				.modId("simplecobalt").setType("blueceladon")
 				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("blueCeladonBoots");
 
 		greenCeladonHelm = new SimpleArmor(SimpleCobalt.armorGreenCeladon, 0)
-				.modId("simplecobalt").setType("greenCeladon")
+				.modId("simplecobalt").setType("greenceladon")
 				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonHelm");
 		greenCeladonChest = new SimpleArmor(SimpleCobalt.armorGreenCeladon, 1)
-				.modId("simplecobalt").setType("greenCeladon")
+				.modId("simplecobalt").setType("greenceladon")
 				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonChest");
 		greenCeladonLegs = new SimpleArmor(SimpleCobalt.armorGreenCeladon, 2)
-				.modId("simplecobalt").setType("greenCeladon")
+				.modId("simplecobalt").setType("greenceladon")
 				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonLegs");
 		greenCeladonBoots = new SimpleArmor(SimpleCobalt.armorGreenCeladon, 3)
-				.modId("simplecobalt").setType("greenCeladon")
+				.modId("simplecobalt").setType("greenceladon")
 				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
 				.setUnlocalizedName("greenCeladonBoots");
 	
