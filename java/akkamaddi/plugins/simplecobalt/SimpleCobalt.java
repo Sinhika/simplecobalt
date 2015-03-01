@@ -1,29 +1,20 @@
 package akkamaddi.plugins.simplecobalt;
 
-import java.io.File;
-
-import alexndr.api.content.inventory.SimpleTab;
-import alexndr.api.core.ContentTypes;
-import alexndr.api.core.LogHelper;
-import alexndr.api.helpers.game.OreGenerator;
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.util.EnumHelper;
+import alexndr.api.content.inventory.SimpleTab;
+import alexndr.api.core.ContentTypes;
+import alexndr.api.core.LogHelper;
+import alexndr.api.helpers.game.OreGenerator;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.EventHandler; // used in 1.6.2
-import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.SidedProxy;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = ModInfo.ID, name = ModInfo.NAME, 
 	version = ModInfo.VERSION, 
@@ -33,8 +24,10 @@ public class SimpleCobalt
 	// tab
 	public static SimpleTab tabAkkamaddiCobalt;
 
-	public static ArmorMaterial armorCobalt, armorBlueDriftSteel, armorBlueCeladon, armorGreenCeladon;
-	public static ToolMaterial toolCobalt, toolBlueDriftSteel, toolBlueCeladon, toolGreenCeladon;
+	public static ArmorMaterial armorCobalt, armorBlueDriftSteel,
+			armorBlueCeladon, armorGreenCeladon;
+	public static ToolMaterial toolCobalt, toolBlueDriftSteel, toolBlueCeladon,
+			toolGreenCeladon;
 
 	@EventHandler 
     public void preInit(FMLPreInitializationEvent event)
@@ -49,232 +42,9 @@ public class SimpleCobalt
 		Content.preInitialize();
 		Recipes.preInitialize();
 		Content.setLoot();
-
 		MinecraftForge.EVENT_BUS.register(new HandlerArmor());
 
-        // define items
-        // Cobalt
-//		cobaltIngot = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("cobaltIngot");
-//		cobaltSword = new SimpleSword(toolCobalt).modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("cobaltSword");
-//		cobaltShovel = new SimpleShovel(toolCobalt).modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("cobaltShovel");
-//		cobaltAxe = new SimpleAxe(toolCobalt).modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("cobaltAxe");
-//		cobaltPickaxe = new SimplePickaxe(toolCobalt).modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("cobaltPickaxe");
-//		cobaltHoe = new SimpleHoe(toolCobalt).modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("cobaltHoe");
-//		cobaltHelm = new SimpleArmor(armorCobalt, rendererCobalt, 0)
-//				.modId("simplecobalt").setType("cobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("cobaltHelm");
-//		cobaltChest = new SimpleArmor(armorCobalt, rendererCobalt, 1)
-//				.modId("simplecobalt").setType("cobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("cobaltChest");
-//		cobaltLegs = new SimpleArmor(armorCobalt, rendererCobalt, 2)
-//				.modId("simplecobalt").setType("cobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("cobaltLegs");
-//		cobaltBoots = new SimpleArmor(armorCobalt, rendererCobalt, 3)
-//				.modId("simplecobalt").setType("cobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("cobaltBoots");
-//        // Blue Drift Steel
-//		blueDriftSteelIngot = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueDriftSteelIngot");
-//		smallBlueDriftSteelChunkItem = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("smallBlueDriftSteelChunkItem");
-//		mediumBlueDriftSteelChunkItem = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("mediumBlueDriftSteelChunkItem");
-//		largeBlueDriftSteelChunkItem = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("largeBlueDriftSteelChunkItem");
-//		blueDriftSteelSword = new SimpleSword(toolBlueDriftSteel)
-//				.modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueDriftSteelSword");
-//		blueDriftSteelShovel = new SimpleShovel(toolBlueDriftSteel)
-//				.modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueDriftSteelShovel");
-//		blueDriftSteelAxe = new SimpleAxe(toolBlueDriftSteel)
-//				.modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueDriftSteelAxe");
-//		blueDriftSteelPickaxe = new SimplePickaxe(toolBlueDriftSteel)
-//				.modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueDriftSteelPickaxe");
-//		blueDriftSteelHoe = new SimpleHoe(toolBlueDriftSteel)
-//				.modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueDriftSteelHoe");
-//		blueDriftSteelHelm = new SimpleArmor(armorBlueDriftSteel,
-//				rendererBlueDriftSteel, 0).modId("simplecobalt")
-//				.setType("bluedriftsteel")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueDriftSteelHelm");
-//		blueDriftSteelChest = new SimpleArmor(armorBlueDriftSteel,
-//				rendererBlueDriftSteel, 1).modId("simplecobalt")
-//				.setType("bluedriftsteel")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueDriftSteelChest");
-//		blueDriftSteelLegs = new SimpleArmor(armorBlueDriftSteel,
-//				rendererBlueDriftSteel, 2).modId("simplecobalt")
-//				.setType("bluedriftsteel")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueDriftSteelLegs");
-//		blueDriftSteelBoots = new SimpleArmor(armorBlueDriftSteel,
-//				rendererBlueDriftSteel, 3).modId("simplecobalt")
-//				.setType("bluedriftsteel")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueDriftSteelBoots");
-//        // Blue Celadon
-//		blueCeladonIngot = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueCeladonIngot");
-//		smallBlueCeladonChunkItem = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("smallBlueCeladonChunkItem");
-//		mediumBlueCeladonChunkItem = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("mediumBlueCeladonChunkItem");
-//		largeBlueCeladonChunkItem = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("largeBlueCeladonChunkItem");
-//		blueCeladonSword = new SimpleSword(toolBlueCeladon)
-//				.modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueCeladonSword");
-//		blueCeladonShovel = new SimpleShovel(toolBlueCeladon)
-//				.modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueCeladonShovel");
-//		blueCeladonAxe = new SimpleAxe(toolBlueCeladon).modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueCeladonAxe");
-//		blueCeladonPickaxe = new SimplePickaxe(toolBlueCeladon)
-//				.modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueCeladonPickaxe");
-//		blueCeladonHoe = new SimpleHoe(toolBlueCeladon).modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueCeladonHoe");
-//		blueCeladonHelm = new SimpleArmor(armorBlueCeladon, rendererCobalt, 0)
-//				.modId("simplecobalt").setType("blueceladon")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueCeladonHelm");
-//		blueCeladonChest = new SimpleArmor(armorBlueCeladon, rendererCobalt, 1)
-//				.modId("simplecobalt").setType("blueceladon")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueCeladonChest");
-//		blueCeladonLegs = new SimpleArmor(armorBlueCeladon, rendererCobalt, 2)
-//				.modId("simplecobalt").setType("blueceladon")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueCeladonLegs");
-//		blueCeladonBoots = new SimpleArmor(armorBlueCeladon, rendererCobalt, 3)
-//				.modId("simplecobalt").setType("blueceladon")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("blueCeladonBoots");
-//        // Green Celadon
-//		greenCeladonIngot = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("greenCeladonIngot");
-//		smallGreenCeladonChunkItem = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("smallGreenCeladonChunkItem");
-//		mediumGreenCeladonChunkItem = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("mediumGreenCeladonChunkItem");
-//		largeGreenCeladonChunkItem = new SimpleIngot().modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("largeGreenCeladonChunkItem");
-//		greenCeladonSword = new SimpleSword(toolGreenCeladon)
-//				.modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("greenCeladonSword");
-//		greenCeladonShovel = new SimpleShovel(toolGreenCeladon)
-//				.modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("greenCeladonShovel");
-//		greenCeladonAxe = new SimpleAxe(toolGreenCeladon).modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("greenCeladonAxe");
-//		greenCeladonPickaxe = new SimplePickaxe(toolGreenCeladon)
-//				.modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("greenCeladonPickaxe");
-//		greenCeladonHoe = new SimpleHoe(toolGreenCeladon).modId("simplecobalt")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("greenCeladonHoe");
-//		greenCeladonHelm = new SimpleArmor(armorGreenCeladon, rendererCobalt, 0)
-//				.modId("simplecobalt").setType("greenceladon")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("greenCeladonHelm");
-//		greenCeladonChest = new SimpleArmor(armorGreenCeladon, rendererCobalt,
-//				1).modId("simplecobalt").setType("greenceladon")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("greenCeladonChest");
-//		greenCeladonLegs = new SimpleArmor(armorGreenCeladon, rendererCobalt, 2)
-//				.modId("simplecobalt").setType("greenceladon")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("greenCeladonLegs");
-//		greenCeladonBoots = new SimpleArmor(armorGreenCeladon, rendererCobalt,
-//				3).modId("simplecobalt").setType("greenceladon")
-//				.setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//				.setUnlocalizedName("greenCeladonBoots");
-//
-//        // define blocks
-//        blockCobalt = new SimpleBlock( Material.iron)
-//        .modId("simplecobalt").setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//        .setHardness(10.0F).setResistance(22.0F).setStepSound(Block.soundTypeMetal)
-//        .setBlockName("blockCobalt");
-//
-//        oreCobalt = new SimpleBlock( Material.iron)
-//        .modId("simplecobalt").setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//        .setHardness(4.0F).setResistance(10.0F).setStepSound(Block.soundTypeMetal)
-//        .setBlockName("oreCobalt");
-//
-//        blockBlueDriftSteel = new SimpleBlock( Material.iron)
-//        .modId("simplecobalt").setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//        .setHardness(10.0F).setResistance(22.0F).setStepSound(Block.soundTypeMetal)
-//        .setBlockName("blockBlueDriftSteel").setLightLevel(1.0F);
-//
-//        blockBlueCeladon = new SimpleBlock(Material.iron)
-//        .modId("simplecobalt").setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//        .setHardness(10.0F).setResistance(22.0F).setStepSound(Block.soundTypeMetal)
-//        .setBlockName("blockBlueCeladon");
-//
-//        blockGreenCeladon = new SimpleBlock( Material.iron)
-//        .modId("simplecobalt").setCreativeTab(SimpleCobalt.tabAkkamaddiCobalt)
-//        .setHardness(10.0F).setResistance(22.0F).setStepSound(Block.soundTypeMetal)
-//        .setBlockName("blockGreenCeladon");
-//        
-//        //blocks
-//        blockCobalt.setHarvestLevel( "pickaxe", 0);
-//        ((SimpleBlock) blockCobalt).setAsBeaconBase(true);
-//        oreCobalt.setHarvestLevel( "pickaxe", 2);
-//        blockBlueDriftSteel.setHarvestLevel( "pickaxe", 0);
-//        ((SimpleBlock) blockBlueDriftSteel).setAsBeaconBase(true);
-//        blockBlueCeladon.setHarvestLevel( "pickaxe", 0);
-//        ((SimpleBlock) blockBlueCeladon).setAsBeaconBase(true);
-//        blockGreenCeladon.setHarvestLevel( "pickaxe", 0);
-//        ((SimpleBlock) blockGreenCeladon).setAsBeaconBase(true);
-//        
-
-    } // end preInit()
+     } // end preInit()
 
 	@EventHandler
 	public void load(FMLInitializationEvent event) {
