@@ -58,17 +58,17 @@ public class Settings extends ASettings
 	 * loads/sets the ore generation variables.
 	 */
 	public static void adjustOreSpawnRates() {
-		cobaltSpawnRate = config.getInt("Cobalt Ore Worldgen",
-				"Cobalt Spawn Rate", 6, 0, 5000,
+		cobaltSpawnRate = config.getInt("Cobalt Spawn Rate","Cobalt Ore Worldgen",
+				 6, 0, 5000,
 				"Controls the spawn rate of Cobalt Ore.");
-		cobaltVeinSize = config.getInt("Cobalt Ore Worldgen",
-				"Cobalt Vein Size", 6, 0, 5000,
+		cobaltVeinSize = config.getInt("Cobalt Vein Size","Cobalt Ore Worldgen",
+				 6, 0, 5000,
 				"Controls the max vein size of Cobalt Ore.");
-		cobaltMaxSpawnHeight = config.getInt("Cobalt Ore Worldgen",
-				"Cobalt Maximum Spawn Height", 32, 0, 255,
+		cobaltMaxSpawnHeight = config.getInt("Cobalt Maximum Spawn Height", "Cobalt Ore Worldgen",
+				32, 0, 255,
 				"Controls the max spawn height of Cobalt Ore.");
-		cobaltMinSpawnHeight = config.getInt("Cobalt Ore Worldgen",
-				"Cobalt Minimum Spawn Height", 0, 0, 255,
+		cobaltMinSpawnHeight = config.getInt("Cobalt Minimum Spawn Height", "Cobalt Ore Worldgen",
+				0, 0, 255,
 				"Controls the min spawn height of Cobalt Ore.");
 	} // end adjustOreSpawnRates()
 
