@@ -1,0 +1,50 @@
+# The overall format is standard TOML format, v0.5.0.
+# The name of the mod loader type to load - for regular FML @Mod mods it should be javafml
+modLoader="javafml" #mandatory
+
+# A version range to match for said mod loader - for regular FML @Mod it will be the forge version
+loaderVersion="[36,)" #mandatory
+issueTrackerURL="https://github.com/Sinhika/simplecobalt/issues"
+license="LGPL 3"
+#logoFile="simplecobalt.png"
+
+[[mods]]
+modId="simplecobalt"
+version="${file.jarVersion}"
+displayName="akkamaddi's Simple Cobalt"
+#updateJSONURL="https://raw.githubusercontent.com/Sinhika/simplecobalt/1.16/update.json"
+#displayURL="http://minecraft.curseforge.com/projects/"
+credits="Created by akkamaddi, reliant on AleXndrTheGr8st. Maintained by Sinhika."
+authors="akkamaddi, Sinhika"
+description='''
+Cobalt Ore and Cobalt Metal, with the alloys Blue Drift Steel, Blue Celadon,
+and Green Celadon.
+'''
+[[dependencies.simplecobalt]]
+    modId="forge"
+    mandatory=true
+    versionRange="[36.1.0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.simplecobalt]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5,)"
+    ordering="NONE"
+    side="BOTH"
+    
+[[dependencies.simplecobalt]]
+    modId="simpleores"
+    mandatory=false
+    versionRange="[1.16.5-2.4.7.0,1.16.5-2.4.8.0)"
+    ordering="BEFORE"
+    side="BOTH"
+
+[[dependencies.simplecobalt]]
+    modId="simplecorelib"
+    mandatory=true
+    versionRange="[1.16.5-2.0.8.0,1.16.5-2.0.9.0)"
+    ordering="NONE"
+    side="BOTH"
+
