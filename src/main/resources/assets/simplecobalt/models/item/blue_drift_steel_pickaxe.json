@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "simplecobalt:item/blue_drift_steel_pickaxe"
+    }
+}

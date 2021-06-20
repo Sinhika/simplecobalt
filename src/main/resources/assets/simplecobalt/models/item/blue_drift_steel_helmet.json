@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "simplecobalt:item/blue_drift_steel_helmet"
+    }
+}

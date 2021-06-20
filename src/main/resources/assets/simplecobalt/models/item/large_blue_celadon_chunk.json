@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "simplecobalt:item/large_blue_celadon_chunk"
+    }
+}

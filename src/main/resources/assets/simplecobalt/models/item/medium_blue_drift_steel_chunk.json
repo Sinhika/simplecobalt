@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "simplecobalt:item/medium_blue_drift_steel_chunk"
+    }
+}

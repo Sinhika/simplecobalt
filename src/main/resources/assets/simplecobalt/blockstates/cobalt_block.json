@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": {
+            "model": "simplecobalt:block/cobalt_block"
+        }
+    }
+}
