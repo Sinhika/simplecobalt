@@ -48,11 +48,11 @@ final class ServerConfig
         serverCobaltVeinSize = builder
                 .comment("Cobalt ore vein size")
                 .translation(SimpleCobalt.MODID + ".config.serverCobaltVeinSize")
-                .defineInRange("CobaltVeinSize", 5, 1, Integer.MAX_VALUE);
+                .defineInRange("CobaltVeinSize", 6, 1, Integer.MAX_VALUE);
         serverCobaltVeinCount = builder
                 .comment("Cobalt ore vein count per chunk")
                 .translation(SimpleCobalt.MODID + ".config.serverCobaltVeinCount")
-                .defineInRange("CobaltVeinCount", 5, 1, Integer.MAX_VALUE);
+                .defineInRange("CobaltVeinCount", 6, 1, Integer.MAX_VALUE);
         serverCobaltBottomHeight = builder
                 .comment("Cobalt ore minimum height")
                 .translation(SimpleCobalt.MODID + ".config.serverCobaltBottomHeight")
@@ -60,7 +60,7 @@ final class ServerConfig
         serverCobaltMaxHeight = builder
                 .comment("Cobalt ore maximum height")
                 .translation(SimpleCobalt.MODID + ".config.serverCobaltMaxHeight")
-                .defineInRange("CobaltMaxHeight", 18, 1, 255);
+                .defineInRange("CobaltMaxHeight", 32, 1, 255);
         builder.pop();
         builder.pop();
         
