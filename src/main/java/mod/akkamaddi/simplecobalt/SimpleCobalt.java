@@ -3,6 +3,7 @@ package mod.akkamaddi.simplecobalt;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import mod.akkamaddi.simplecobalt.config.ConfigHolder;
 import mod.akkamaddi.simplecobalt.init.ModBlocks;
 import mod.akkamaddi.simplecobalt.init.ModItems;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -28,8 +29,8 @@ public class SimpleCobalt
         ModItems.ITEMS.register(modEventBus);
         
         // Register Configs
-//        modLoadingContext.registerConfig(ModConfig.Type.COMMON, ConfigHolder.SERVER_SPEC);
-//        modLoadingContext.registerConfig(ModConfig.Type.CLIENT, ConfigHolder.CLIENT_SPEC);
+        modLoadingContext.registerConfig(ModConfig.Type.COMMON, ConfigHolder.SERVER_SPEC);
+        modLoadingContext.registerConfig(ModConfig.Type.CLIENT, ConfigHolder.CLIENT_SPEC);
    
     }
 } // end class

@@ -1,5 +1,7 @@
 package mod.akkamaddi.simplecobalt.content;
 
+import java.util.function.Supplier;
+
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.crafting.Ingredient;
@@ -15,15 +17,18 @@ public enum SimpleCobaltArmorMaterial implements IArmorMaterial
     COBALT("simplecobalt:cobalt", 24, new int[] {3, 3, 4, 3 }, 8, 
             SoundEvents.ARMOR_EQUIP_IRON, 0.0F,
             ()-> { return Ingredient.of(ModItems.cobalt_ingot.get());}),
+    
     BLUE_DRIFT_STEEL("simplecobalt:blue_drift_steel", 26, new int[] {3, 5, 6, 3}, 16,
             SoundEvents.ARMOR_EQUIP_IRON, 2.0F, 
             ()-> { return Ingredient.of(ModItems.blue_drift_steel_ingot.get());}),
+    
     BLUE_CELADON("simplecobalt:blue_celadon", 30, new int[] {4, 5, 6, 4}, 24, 
             SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F,
             ()-> { return Ingredient.of(ModItems.blue_celadon_ingot.get());}),
+    
     GREEN_CELADON("simplecobalt:green_celadon", 44, new int[] {5, 8, 9, 5}, 26, 
             SoundEvents.ARMOR_EQUIP_DIAMOND, 1.0F, 
-            ()-> { return Ingredient.of(ModItems.green_celadon_ingot.get());}),
+            ()-> { return Ingredient.of(ModItems.green_celadon_ingot.get());});
     
     // {feet, legs, chest, head}
     private static final int[] MAX_DAMAGE_ARRAY = new int[]{13, 15, 16, 11};
