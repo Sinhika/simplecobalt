@@ -14,7 +14,7 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
  */
 public class OreGeneration
 {
-    public static ConfiguredFeature<?, ?> ORE_TUNGSTEN;
+    public static ConfiguredFeature<?, ?> ORE_COBALT;
 
     /**
      * initialize overworld Features.
@@ -23,9 +23,9 @@ public class OreGeneration
      */
     public static void initOverworldFeatures()
     {
-        ORE_TUNGSTEN = OreGenUtils.buildOverworldOreFeature(Feature.ORE, ModBlocks.cobalt_ore.get().defaultBlockState(),
+        ORE_COBALT = OreGenUtils.buildOverworldOreFeature(Feature.ORE, ModBlocks.cobalt_ore.get().defaultBlockState(),
                 SimpleCobaltConfig.cobalt_cfg);
-        OreGenUtils.registerFeature(SimpleCobalt.MODID, "cobalt_vein", ORE_TUNGSTEN);
+        OreGenUtils.registerFeature(SimpleCobalt.MODID, "cobalt_vein", ORE_COBALT);
 
     }
     
@@ -34,7 +34,7 @@ public class OreGeneration
      */
     public static void generateOverworldOres(BiomeLoadingEvent evt)
     {
-        evt.getGeneration().addFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_TUNGSTEN);
+        evt.getGeneration().addFeature(Decoration.UNDERGROUND_ORES, OreGeneration.ORE_COBALT);
     } // end generateOverworldOres()
 
 } // end class OreGeneration
