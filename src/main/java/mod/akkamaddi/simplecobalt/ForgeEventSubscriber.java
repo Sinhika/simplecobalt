@@ -3,6 +3,7 @@ package mod.akkamaddi.simplecobalt;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import mod.akkamaddi.simplecobalt.loot.SimpleCobaltInjectionLookup;
 import mod.alexndr.simplecorelib.helpers.ArmorUtils;
 import mod.alexndr.simplecorelib.helpers.LootUtils;
 import mod.alexndr.simpleores.generation.OreGeneration;

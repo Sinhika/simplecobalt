@@ -5,6 +5,7 @@ import javax.annotation.Nonnull;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import mod.akkamaddi.simplecobalt.init.ModBlocks;
 import mod.alexndr.simplecorelib.config.FlagCondition;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -89,7 +90,7 @@ public final class ModEventSubscriber
     public static void onRegisterRecipeSerializers(
             @Nonnull final RegistryEvent.Register<IRecipeSerializer<?>> event)
     {
-        CraftingHelper.register(new FlagCondition.Serializer(SimpleTungstenConfig.INSTANCE, 
+        CraftingHelper.register(new FlagCondition.Serializer(SimpleCobaltConfig.INSTANCE, 
                 new ResourceLocation(SimpleCobalt.MODID, "flag")));
     } // end registerRecipeSerializers
 

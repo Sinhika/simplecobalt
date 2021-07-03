@@ -6,7 +6,7 @@ modLoader="javafml" #mandatory
 loaderVersion="[36,)" #mandatory
 issueTrackerURL="https://github.com/Sinhika/simplecobalt/issues"
 license="LGPL 3"
-#logoFile="simplecobalt.png"
+logoFile="logo.png"
 
 [[mods]]
 modId="simplecobalt"
