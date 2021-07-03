@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import mod.akkamaddi.simplecobalt.init.ModBlocks;
+import mod.akkamaddi.simplecobalt.init.ModTabGroups;
 import mod.alexndr.simplecorelib.config.FlagCondition;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
