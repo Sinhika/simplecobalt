@@ -21,7 +21,7 @@ public class SimpleCobalt
 
     public SimpleCobalt()
     {
-        LOGGER.debug("Hello from akkamaddi's Simple Tungsten!");
+        LOGGER.debug("Hello from akkamaddi's Simple Cobalt!");
         final ModLoadingContext modLoadingContext = ModLoadingContext.get();
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         
