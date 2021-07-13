@@ -5,10 +5,10 @@ import org.apache.logging.log4j.Logger;
 
 import mod.akkamaddi.simplecobalt.config.SimpleCobaltConfig;
 import mod.akkamaddi.simplecobalt.content.SimpleCobaltArmorMaterial;
+import mod.akkamaddi.simplecobalt.generation.OreGeneration;
 import mod.akkamaddi.simplecobalt.loot.SimpleCobaltInjectionLookup;
 import mod.alexndr.simplecorelib.helpers.ArmorUtils;
 import mod.alexndr.simplecorelib.helpers.LootUtils;
-import mod.alexndr.simpleores.generation.OreGeneration;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.biome.Biome;
@@ -44,7 +44,8 @@ public final class ForgeEventSubscriber
     @SubscribeEvent(priority=EventPriority.HIGH)
     public static void onBiomeLoading(BiomeLoadingEvent evt)
     {
-        if (evt.getCategory() != Biome.Category.NETHER && evt.getCategory() != Biome.Category.THEEND)
+        if ((evt.getCategory() != Biome.Category.NETHER) && (evt.getCategory() != Biome.Category.THEEND)
+             && SimpleCobaltConfig.enableCobaltOre)
         {
             OreGeneration.generateOverworldOres(evt);
         }

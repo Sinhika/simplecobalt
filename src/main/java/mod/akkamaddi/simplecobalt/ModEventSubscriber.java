@@ -39,7 +39,7 @@ public final class ModEventSubscriber
     {
         event.enqueueWork(() -> {
             OreGeneration.initOverworldFeatures();
-      });
+        });
         LOGGER.debug("Common setup done");
     } // end onCommonSetup
 
