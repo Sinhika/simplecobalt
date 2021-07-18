@@ -27,7 +27,7 @@
           "tag": "minecraft:coals"
         },
         "output": {
-          "item": "simplecobalt:cobalt_ingot",
+          "item": "simplecobalt:cobalt_ore",
           "count": 2
         },
         "cookingtime": 600,

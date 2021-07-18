@@ -6,6 +6,7 @@ import java.util.function.Consumer;
 
 import mod.akkamaddi.simplecobalt.SimpleCobalt;
 import mod.akkamaddi.simplecobalt.config.SimpleCobaltConfig;
+import mod.akkamaddi.simplecobalt.init.ModBlocks;
 import mod.akkamaddi.simplecobalt.init.ModItems;
 import mod.akkamaddi.simplecobalt.init.ModTags;
 import mod.alexndr.fusion.api.datagen.FusionRecipeSetBuilder;
@@ -48,7 +49,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
                 ModItems.cobalt_shovel.get(), ModItems.cobalt_sword.get()),
                 Ingredient.of(ModItems.cobalt_chestplate.get(), ModItems.cobalt_leggings.get()),
                 Ingredient.of(Blocks.GRAVEL), Ingredient.of(ItemTags.COALS), 
-                ModItems.cobalt_ingot.get(), 15.0F, 600, flag("recycling_recipes"), 
+                ModBlocks.cobalt_ore.get(), 15.0F, 600, flag("recycling_recipes"), 
                 "recycle_cobalt_items");
         
     } // end registerCobaltRecyclingRecipes
@@ -70,7 +71,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
         fusionbuilder.buildBasicAlloyRecipes(consumer, primary_inputs, catalysts, 
                 ModItems.blue_drift_steel_nugget.get(), ModItems.medium_blue_drift_steel_chunk.get(), 
                 ModItems.large_blue_drift_steel_chunk.get(),
-                6.0F, 600, flag("blue_drift_steel_making"));
+                6.0F, 600, flag("blue_drift_steel_recipes"));
         
         // blue_drift_steel fusion recycling recipes
         fusionbuilder.buildFusionRecyclingRecipes(consumer, Ingredient.of(ModItems.blue_drift_steel_axe.get(), 
@@ -101,7 +102,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
         fusionbuilder.buildBasicAlloyRecipes(consumer, primary_inputs, catalysts, 
                 ModItems.blue_celadon_nugget.get(), ModItems.medium_blue_celadon_chunk.get(), 
                 ModItems.large_blue_celadon_chunk.get(),
-                8.0F, 600, flag("blue_celadon_making"));
+                8.0F, 600, flag("blue_celadon_recipes"));
         
         // blue_celadon fusion recycling recipes
         fusionbuilder.buildFusionRecyclingRecipes(consumer, Ingredient.of(ModItems.blue_celadon_axe.get(), 
@@ -132,7 +133,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
         fusionbuilder.buildBasicAlloyRecipes(consumer, primary_inputs, catalysts, 
                 ModItems.green_celadon_nugget.get(), ModItems.medium_green_celadon_chunk.get(), 
                 ModItems.large_green_celadon_chunk.get(),
-                10.0F, 600, flag("green_celadon_making"));
+                10.0F, 600, flag("green_celadon_recipes"));
         
         // green_celadon fusion recycling recipes
         fusionbuilder.buildFusionRecyclingRecipes(consumer, Ingredient.of(ModItems.green_celadon_axe.get(), 

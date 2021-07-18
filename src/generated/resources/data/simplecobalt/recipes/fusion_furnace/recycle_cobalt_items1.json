@@ -39,7 +39,7 @@
           "tag": "minecraft:coals"
         },
         "output": {
-          "item": "simplecobalt:cobalt_ingot"
+          "item": "simplecobalt:cobalt_ore"
         },
         "cookingtime": 600,
         "experience": 15.0

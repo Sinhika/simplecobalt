@@ -4,7 +4,7 @@
     {
       "conditions": [
         {
-          "flag": "blue_celadon_making",
+          "flag": "blue_celadon_recipes",
           "type": "simplecobalt:flag"
         }
       ],
