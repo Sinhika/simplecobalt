@@ -27,7 +27,7 @@
           "tag": "minecraft:coals"
         },
         "output": {
-          "item": "simplecobalt:blue_drift_steel_ingot",
+          "item": "simplecobalt:large_blue_drift_steel_chunk",
           "count": 2
         },
         "cookingtime": 600,

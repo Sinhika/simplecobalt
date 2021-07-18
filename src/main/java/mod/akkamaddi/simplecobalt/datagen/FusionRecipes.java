@@ -80,7 +80,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
                 ModItems.blue_drift_steel_shovel.get(), ModItems.blue_drift_steel_sword.get()),
                 Ingredient.of(ModItems.blue_drift_steel_chestplate.get(), ModItems.blue_drift_steel_leggings.get()),
                 Ingredient.of(Blocks.GRAVEL), Ingredient.of(ItemTags.COALS), 
-                ModItems.blue_drift_steel_ingot.get(), 15.0F, 600, flag("recycling_recipes"), 
+                ModItems.large_blue_drift_steel_chunk.get(), 15.0F, 600, flag("recycling_recipes"), 
                 "recycle_blue_drift_steel_items");
     } // end registerBlueDriftSteelRecipes
     
@@ -111,7 +111,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
                 ModItems.blue_celadon_shovel.get(), ModItems.blue_celadon_sword.get()),
                 Ingredient.of(ModItems.blue_celadon_chestplate.get(), ModItems.blue_celadon_leggings.get()),
                 Ingredient.of(Blocks.GRAVEL), Ingredient.of(Items.LAVA_BUCKET), 
-                ModItems.blue_celadon_ingot.get(), 20.0F, 600, flag("recycling_recipes"), 
+                ModItems.large_blue_celadon_chunk.get(), 20.0F, 600, flag("recycling_recipes"), 
                 "recycle_blue_celadon_items");
     } // end registerBlueCeladonRecipes
     
@@ -142,7 +142,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
                 ModItems.green_celadon_shovel.get(), ModItems.green_celadon_sword.get()),
                 Ingredient.of(ModItems.green_celadon_chestplate.get(), ModItems.green_celadon_leggings.get()),
                 Ingredient.of(Blocks.GRAVEL), Ingredient.of(Items.LAVA_BUCKET), 
-                ModItems.green_celadon_ingot.get(), 20.0F, 600, flag("recycling_recipes"), 
+                ModItems.large_green_celadon_chunk.get(), 20.0F, 600, flag("recycling_recipes"), 
                 "recycle_green_celadon_items");
     } // end registerGreenCeladonRecipes
     

@@ -27,7 +27,7 @@
           "item": "minecraft:lava_bucket"
         },
         "output": {
-          "item": "simplecobalt:green_celadon_ingot",
+          "item": "simplecobalt:large_green_celadon_chunk",
           "count": 2
         },
         "cookingtime": 600,
