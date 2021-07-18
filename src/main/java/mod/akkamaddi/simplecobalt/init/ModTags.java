@@ -9,8 +9,8 @@ public class ModTags
     public static class Items
     {
         public static final ITag.INamedTag<Item> INGOTS_COBALT = TagUtils.forgeTag("ingots/cobalt");
-        
-
+        public static final ITag.INamedTag<Item> INGOTS_MYTHRIL = TagUtils.forgeTag("ingots/mythril");
+        public static final ITag.INamedTag<Item> INGOTS_ADAMANTIUM = TagUtils.forgeTag("ingots/adamantium");
     } // end class Items
 
 } // end class
