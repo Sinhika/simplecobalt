@@ -68,6 +68,7 @@ public class CobaltLootInjectorProvider extends LootTableInjectorProvider
                         .apply(SetCount.setCount(RandomValueRange.between(1, 2))))
                 .add(ItemLootEntry.lootTableItem(ModItems.green_celadon_ingot.get()).setWeight(1)
                         .apply(SetCount.setCount(RandomValueRange.between(1, 2))));
+        addInjectionTable(SimpleCobalt.MODID, "underwater_ruins", foo);
         
         // stronghold
         foo = createChestPool(1,1,0.50F)
@@ -84,7 +85,6 @@ public class CobaltLootInjectorProvider extends LootTableInjectorProvider
                 .add(ItemLootEntry.lootTableItem(ModItems.blue_celadon_axe.get()).setWeight(1))
                 .add(ItemLootEntry.lootTableItem(ModItems.green_celadon_boots.get()).setWeight(1));
         addInjectionTable(SimpleCobalt.MODID, "stronghold", foo);
-                        
         
         return tables;
     } //end getTables()
