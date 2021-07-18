@@ -7,6 +7,7 @@ import java.util.function.Supplier;
 
 import com.mojang.datafixers.util.Pair;
 
+import mod.akkamaddi.simplecobalt.init.ModBlocks;
 import mod.alexndr.simplecorelib.datagen.BlockLootTableProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.loot.LootParameterSet;
@@ -26,7 +27,11 @@ public class CobaltLootTableProvider extends BlockLootTableProvider
     protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, Builder>>>, LootParameterSet>> getTables()
     {
         tables.clear();
-        // TODO
+        standardDropTable(ModBlocks.cobalt_ore.get());
+        standardDropTable(ModBlocks.cobalt_block.get());
+        standardDropTable(ModBlocks.blue_drift_steel_block.get());
+        standardDropTable(ModBlocks.blue_celadon_block.get());
+        standardDropTable(ModBlocks.green_celadon_block.get());
         return tables;
     }
 
