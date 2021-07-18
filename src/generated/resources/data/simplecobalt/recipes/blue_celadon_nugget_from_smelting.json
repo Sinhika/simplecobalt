@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": [
+    {
+      "item": "simplecobalt:blue_celadon_axe"
+    },
+    {
+      "item": "simplecobalt:blue_celadon_pickaxe"
+    },
+    {
+      "item": "simplecobalt:blue_celadon_boots"
+    },
+    {
+      "item": "simplecobalt:blue_celadon_chestplate"
+    },
+    {
+      "item": "simplecobalt:blue_celadon_helmet"
+    },
+    {
+      "item": "simplecobalt:blue_celadon_leggings"
+    },
+    {
+      "item": "simplecobalt:blue_celadon_shovel"
+    },
+    {
+      "item": "simplecobalt:blue_celadon_sword"
+    }
+  ],
+  "result": "simplecobalt:blue_celadon_nugget",
+  "experience": 1.0,
+  "cookingtime": 200
+}

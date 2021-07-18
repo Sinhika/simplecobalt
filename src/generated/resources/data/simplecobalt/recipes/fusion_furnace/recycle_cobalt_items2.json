@@ -1,0 +1,38 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "recycling_recipes",
+          "type": "simplecobalt:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          [
+            {
+              "item": "simplecobalt:cobalt_chestplate"
+            },
+            {
+              "item": "simplecobalt:cobalt_leggings"
+            }
+          ],
+          {
+            "item": "minecraft:gravel"
+          }
+        ],
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "output": {
+          "item": "simplecobalt:cobalt_ingot",
+          "count": 2
+        },
+        "cookingtime": 600,
+        "experience": 30.0
+      }
+    }
+  ]
+}

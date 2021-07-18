@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": [
+    {
+      "item": "simplecobalt:green_celadon_axe"
+    },
+    {
+      "item": "simplecobalt:green_celadon_pickaxe"
+    },
+    {
+      "item": "simplecobalt:green_celadon_boots"
+    },
+    {
+      "item": "simplecobalt:green_celadon_chestplate"
+    },
+    {
+      "item": "simplecobalt:green_celadon_helmet"
+    },
+    {
+      "item": "simplecobalt:green_celadon_leggings"
+    },
+    {
+      "item": "simplecobalt:green_celadon_shovel"
+    },
+    {
+      "item": "simplecobalt:green_celadon_sword"
+    }
+  ],
+  "result": "simplecobalt:green_celadon_nugget",
+  "experience": 1.4,
+  "cookingtime": 200
+}

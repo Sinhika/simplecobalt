@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:storage_blocks/cobalt_block",
+    "#forge:storage_blocks/blue_drift_steel_block",
+    "#forge:storage_blocks/blue_celadon_block",
+    "#forge:storage_blocks/green_celadon_block"
+  ]
+}

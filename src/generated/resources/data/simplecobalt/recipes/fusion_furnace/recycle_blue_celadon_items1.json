@@ -1,0 +1,49 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "recycling_recipes",
+          "type": "simplecobalt:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          [
+            {
+              "item": "simplecobalt:blue_celadon_axe"
+            },
+            {
+              "item": "simplecobalt:blue_celadon_pickaxe"
+            },
+            {
+              "item": "simplecobalt:blue_celadon_boots"
+            },
+            {
+              "item": "simplecobalt:blue_celadon_helmet"
+            },
+            {
+              "item": "simplecobalt:blue_celadon_shovel"
+            },
+            {
+              "item": "simplecobalt:blue_celadon_sword"
+            }
+          ],
+          {
+            "item": "minecraft:gravel"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:lava_bucket"
+        },
+        "output": {
+          "item": "simplecobalt:blue_celadon_ingot"
+        },
+        "cookingtime": 600,
+        "experience": 20.0
+      }
+    }
+  ]
+}

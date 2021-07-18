@@ -1,0 +1,49 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "recycling_recipes",
+          "type": "simplecobalt:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          [
+            {
+              "item": "simplecobalt:blue_drift_steel_axe"
+            },
+            {
+              "item": "simplecobalt:blue_drift_steel_pickaxe"
+            },
+            {
+              "item": "simplecobalt:blue_drift_steel_boots"
+            },
+            {
+              "item": "simplecobalt:blue_drift_steel_helmet"
+            },
+            {
+              "item": "simplecobalt:blue_drift_steel_shovel"
+            },
+            {
+              "item": "simplecobalt:blue_drift_steel_sword"
+            }
+          ],
+          {
+            "item": "minecraft:gravel"
+          }
+        ],
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "output": {
+          "item": "simplecobalt:blue_drift_steel_ingot"
+        },
+        "cookingtime": 600,
+        "experience": 15.0
+      }
+    }
+  ]
+}

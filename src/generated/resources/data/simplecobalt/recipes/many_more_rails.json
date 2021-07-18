@@ -1,0 +1,33 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "blue_drift_steel_recipes",
+          "type": "simplecobalt:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "X X",
+          "XYX",
+          "X X"
+        ],
+        "key": {
+          "X": {
+            "item": "simplecobalt:blue_drift_steel_ingot"
+          },
+          "Y": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "minecraft:rail",
+          "count": 44
+        }
+      }
+    }
+  ]
+}

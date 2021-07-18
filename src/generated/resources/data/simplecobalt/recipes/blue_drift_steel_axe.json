@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "blue_drift_steel_recipes",
+          "type": "simplecobalt:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "SS ",
+          "ST ",
+          " T "
+        ],
+        "key": {
+          "S": {
+            "item": "simplecobalt:blue_drift_steel_ingot"
+          },
+          "T": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "simplecobalt:blue_drift_steel_axe"
+        }
+      }
+    }
+  ]
+}

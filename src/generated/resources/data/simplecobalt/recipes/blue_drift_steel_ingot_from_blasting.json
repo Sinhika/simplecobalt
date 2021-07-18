@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "simplecobalt:large_blue_drift_steel_chunk"
+  },
+  "result": "simplecobalt:blue_drift_steel_ingot",
+  "experience": 0.9,
+  "cookingtime": 100
+}

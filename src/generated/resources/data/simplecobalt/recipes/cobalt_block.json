@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "simplecobalt:cobalt_ingot"
+    }
+  },
+  "result": {
+    "item": "simplecobalt:cobalt_block"
+  }
+}

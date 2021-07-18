@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "simplecobalt:green_celadon_nugget"
+    }
+  },
+  "result": {
+    "item": "simplecobalt:green_celadon_ingot"
+  }
+}

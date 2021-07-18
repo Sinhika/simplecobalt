@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "green_celadon_making",
+          "type": "simplecobalt:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          {
+            "tag": "forge:ingots/cobalt"
+          },
+          {
+            "tag": "forge:ingots/adamantium"
+          }
+        ],
+        "catalyst": {
+          "item": "minecraft:lapis_lazuli"
+        },
+        "output": {
+          "item": "simplecobalt:green_celadon_nugget"
+        },
+        "cookingtime": 600,
+        "experience": 10.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:nuggets/cobalt",
+    "#forge:nuggets/blue_drift_steel",
+    "#forge:nuggets/blue_celadon",
+    "#forge:nuggets/green_celadon"
+  ]
+}

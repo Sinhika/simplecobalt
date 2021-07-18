@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simplecobalt:blue_drift_steel_nugget_from_blasting"
+    ]
+  },
+  "criteria": {
+    "blue_drift_steel_nugget_from_blasting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "simplecobalt:blue_drift_steel_axe"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplecobalt:blue_drift_steel_nugget_from_blasting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blue_drift_steel_nugget_from_blasting",
+      "has_the_recipe"
+    ]
+  ]
+}

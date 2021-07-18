@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": [
+    {
+      "item": "simplecobalt:cobalt_axe"
+    },
+    {
+      "item": "simplecobalt:cobalt_boots"
+    },
+    {
+      "item": "simplecobalt:cobalt_chestplate"
+    },
+    {
+      "item": "simplecobalt:cobalt_helmet"
+    },
+    {
+      "item": "simplecobalt:cobalt_hoe"
+    },
+    {
+      "item": "simplecobalt:cobalt_leggings"
+    },
+    {
+      "item": "simplecobalt:cobalt_pickaxe"
+    },
+    {
+      "item": "simplecobalt:cobalt_shovel"
+    },
+    {
+      "item": "simplecobalt:cobalt_sword"
+    }
+  ],
+  "result": "simplecobalt:cobalt_nugget",
+  "experience": 0.8,
+  "cookingtime": 100
+}

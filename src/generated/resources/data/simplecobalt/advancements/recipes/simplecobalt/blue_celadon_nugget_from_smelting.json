@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simplecobalt:blue_celadon_nugget_from_smelting"
+    ]
+  },
+  "criteria": {
+    "blue_celadon_nugget_from_smelting": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "simplecobalt:blue_celadon_axe"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplecobalt:blue_celadon_nugget_from_smelting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "blue_celadon_nugget_from_smelting",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "key": {
+    "S": {
+      "item": "simplecobalt:blue_drift_steel_ingot"
+    }
+  },
+  "result": {
+    "item": "simplecobalt:blue_drift_steel_block"
+  }
+}

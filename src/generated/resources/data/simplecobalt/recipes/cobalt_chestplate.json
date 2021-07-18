@@ -1,0 +1,29 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "cobalt_recipes",
+          "type": "simplecobalt:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "S S",
+          "SSS",
+          "SSS"
+        ],
+        "key": {
+          "S": {
+            "item": "simplecobalt:cobalt_ingot"
+          }
+        },
+        "result": {
+          "item": "simplecobalt:cobalt_chestplate"
+        }
+      }
+    }
+  ]
+}

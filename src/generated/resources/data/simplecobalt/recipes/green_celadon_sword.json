@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "green_celadon_recipes",
+          "type": "simplecobalt:flag"
+        }
+      ],
+      "recipe": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          " S ",
+          " S ",
+          " T "
+        ],
+        "key": {
+          "S": {
+            "item": "simplecobalt:green_celadon_ingot"
+          },
+          "T": {
+            "tag": "forge:rods/wooden"
+          }
+        },
+        "result": {
+          "item": "simplecobalt:green_celadon_sword"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simplecobalt:green_celadon_block"
+    }
+  ],
+  "result": {
+    "item": "simplecobalt:green_celadon_ingot",
+    "count": 9
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simplecobalt:large_blue_drift_steel_chunk"
+    }
+  ],
+  "result": {
+    "item": "simplecobalt:medium_blue_drift_steel_chunk",
+    "count": 2
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "simplecobalt:large_green_celadon_chunk"
+  },
+  "result": "simplecobalt:green_celadon_ingot",
+  "experience": 1.4,
+  "cookingtime": 200
+}

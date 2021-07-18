@@ -1,0 +1,32 @@
+{
+  "type": "forge:conditional",
+  "recipes": [
+    {
+      "conditions": [
+        {
+          "flag": "blue_drift_steel_making",
+          "type": "simplecobalt:flag"
+        }
+      ],
+      "recipe": {
+        "type": "fusion:alloying",
+        "inputs": [
+          {
+            "tag": "forge:ingots/cobalt"
+          },
+          {
+            "item": "minecraft:iron_ingot"
+          }
+        ],
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "output": {
+          "item": "simplecobalt:blue_drift_steel_nugget"
+        },
+        "cookingtime": 600,
+        "experience": 6.0
+      }
+    }
+  ]
+}

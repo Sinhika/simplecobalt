@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": [
+    {
+      "item": "simplecobalt:blue_drift_steel_axe"
+    },
+    {
+      "item": "simplecobalt:blue_drift_steel_pickaxe"
+    },
+    {
+      "item": "simplecobalt:blue_drift_steel_boots"
+    },
+    {
+      "item": "simplecobalt:blue_drift_steel_chestplate"
+    },
+    {
+      "item": "simplecobalt:blue_drift_steel_helmet"
+    },
+    {
+      "item": "simplecobalt:blue_drift_steel_leggings"
+    },
+    {
+      "item": "simplecobalt:blue_drift_steel_shovel"
+    },
+    {
+      "item": "simplecobalt:blue_drift_steel_sword"
+    }
+  ],
+  "result": "simplecobalt:blue_drift_steel_nugget",
+  "experience": 0.9,
+  "cookingtime": 200
+}

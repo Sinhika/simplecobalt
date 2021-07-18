@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:ingots/cobalt",
+    "#forge:ingots/blue_drift_steel",
+    "#forge:ingots/blue_celadon",
+    "#forge:ingots/green_celadon"
+  ]
+}

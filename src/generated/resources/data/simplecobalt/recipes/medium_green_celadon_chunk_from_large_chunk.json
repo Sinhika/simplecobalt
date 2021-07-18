@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simplecobalt:large_green_celadon_chunk"
+    }
+  ],
+  "result": {
+    "item": "simplecobalt:medium_green_celadon_chunk",
+    "count": 2
+  }
+}
