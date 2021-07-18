@@ -16,12 +16,9 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
-import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
-import net.minecraftforge.fluids.capability.templates.FluidHandlerItemStack;
 
 public class FusionRecipes extends AbstractFusionRecipeProvider implements IConditionBuilder, ISimpleConditionBuilder
 {
