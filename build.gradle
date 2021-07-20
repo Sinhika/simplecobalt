@@ -170,7 +170,7 @@ jar.finalizedBy('reobfJar')
 publishing {
     publications {
         mavenJava(MavenPublication) {
-            groupId = 'simplecobalt'
+            groupId = 'simple-cobalt'
             artifact jar
         }
     }
