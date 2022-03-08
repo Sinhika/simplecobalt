@@ -1,6 +1,6 @@
 package mod.akkamaddi.simplecobalt.config;
 
-import net.minecraft.world.gen.placement.TopSolidRangeConfig;
+import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
 import net.minecraftforge.fml.config.ModConfig;
 import mod.alexndr.simplecorelib.config.ModOreConfig;
 
@@ -21,7 +21,7 @@ public final class ConfigHelper
         
         //SimpleCobaltConfig.cobalt_veinsize = ConfigHolder.SERVER.serverCobaltVeinSize.get();
         SimpleCobaltConfig.cobalt_cfg = new ModOreConfig(
-                new TopSolidRangeConfig( ConfigHolder.SERVER.serverCobaltBottomHeight.get(), 
+                new RangeDecoratorConfiguration( ConfigHolder.SERVER.serverCobaltBottomHeight.get(), 
                         0, ConfigHolder.SERVER.serverCobaltMaxHeight.get()),
                 ConfigHolder.SERVER.serverCobaltVeinSize.get(),
                 ConfigHolder.SERVER.serverCobaltVeinCount.get());

@@ -10,9 +10,9 @@ import com.mojang.datafixers.util.Pair;
 import mod.akkamaddi.simplecobalt.init.ModBlocks;
 import mod.alexndr.simplecorelib.datagen.BlockLootTableProvider;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.loot.LootParameterSet;
-import net.minecraft.loot.LootTable.Builder;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.level.storage.loot.parameters.LootContextParamSet;
+import net.minecraft.world.level.storage.loot.LootTable.Builder;
+import net.minecraft.resources.ResourceLocation;
 
 public class CobaltLootTableProvider extends BlockLootTableProvider
 {
@@ -24,7 +24,7 @@ public class CobaltLootTableProvider extends BlockLootTableProvider
     }
 
     @Override
-    protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, Builder>>>, LootParameterSet>> getTables()
+    protected List<Pair<Supplier<Consumer<BiConsumer<ResourceLocation, Builder>>>, LootContextParamSet>> getTables()
     {
         tables.clear();
         standardDropTable(ModBlocks.cobalt_ore.get());

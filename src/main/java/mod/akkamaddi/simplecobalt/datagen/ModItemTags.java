@@ -3,7 +3,7 @@ package mod.akkamaddi.simplecobalt.datagen;
 import mod.akkamaddi.simplecobalt.SimpleCobalt;
 import mod.alexndr.simplecorelib.helpers.TagUtils;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.ItemTagsProvider;
+import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import mod.akkamaddi.simplecobalt.init.ModItems;
 

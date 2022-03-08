@@ -4,7 +4,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '4.1.+', changing: true
+        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
     }
 }
 apply plugin: 'net.minecraftforge.gradle'
@@ -25,7 +25,7 @@ version = "${version_minecraft}-${version_mod}." + getVersionAppendage()
 group = 'mod.akkamaddi.simplecobalt'
 archivesBaseName = 'simplecobalt'
 
-java.toolchain.languageVersion = JavaLanguageVersion.of(8) // Mojang ships Java 8 to end users, so your mod should target Java 8.
+java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 
@@ -41,7 +41,6 @@ minecraft {
     //
     // Use non-default mappings at your own risk. they may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    // mappings channel: 'snapshot', version: "${version_snapshot}"
     mappings channel: 'official', version: "${version_minecraft}"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
     
@@ -140,9 +139,9 @@ dependencies {
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft "net.minecraftforge:forge:${version_forge}"
-    compile fg.deobf("simplecore-api:SimpleCoreLib:${simplecorelib_version}")
-    compile fg.deobf("simpleores:SimpleOres2:${simpleores_version}")
-    compile fg.deobf("fusion:Fusion:${fusion_version}")
+    implementation fg.deobf("simplecore-api:SimpleCoreLib:${simplecorelib_version}")
+    implementation fg.deobf("simpleores:SimpleOres2:${simpleores_version}")
+    implementation fg.deobf("fusion:Fusion:${fusion_version}")
 }
 
 // Example for how to get properties into the manifest for reading by the runtime..

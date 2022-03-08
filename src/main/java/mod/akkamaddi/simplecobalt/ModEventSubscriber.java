@@ -12,10 +12,10 @@ import mod.akkamaddi.simplecobalt.generation.OreGeneration;
 import mod.akkamaddi.simplecobalt.init.ModBlocks;
 import mod.akkamaddi.simplecobalt.init.ModTabGroups;
 import mod.alexndr.simplecorelib.config.FlagCondition;
-import net.minecraft.item.BlockItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.crafting.IRecipeSerializer;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -93,7 +93,7 @@ public final class ModEventSubscriber
     
     @SubscribeEvent
     public static void onRegisterRecipeSerializers(
-            @Nonnull final RegistryEvent.Register<IRecipeSerializer<?>> event)
+            @Nonnull final RegistryEvent.Register<RecipeSerializer<?>> event)
     {
         CraftingHelper.register(new FlagCondition.Serializer(SimpleCobaltConfig.INSTANCE, 
                 new ResourceLocation(SimpleCobalt.MODID, "flag")));

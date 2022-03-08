@@ -5,15 +5,15 @@ import java.util.function.Supplier;
 import javax.annotation.Nonnull;
 
 import mod.akkamaddi.simplecobalt.SimpleCobalt;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
 
 public final class ModTabGroups
 {
-    public static final ItemGroup MOD_ITEM_GROUP =
+    public static final CreativeModeTab MOD_ITEM_GROUP =
             new ModTabGroup(SimpleCobalt.MODID, () -> new ItemStack(ModBlocks.cobalt_ore.get()));
 
-    public static final class ModTabGroup extends ItemGroup
+    public static final class ModTabGroup extends CreativeModeTab
     {
         @Nonnull
         private final Supplier<ItemStack> iconSupplier;

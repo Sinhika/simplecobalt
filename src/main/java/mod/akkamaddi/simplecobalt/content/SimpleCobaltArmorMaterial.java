@@ -2,17 +2,17 @@ package mod.akkamaddi.simplecobalt.content;
 
 import java.util.function.Supplier;
 
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.IArmorMaterial;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyValue;
-import net.minecraft.util.SoundEvent;
-import net.minecraft.util.SoundEvents;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.util.LazyLoadedValue;
+import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import mod.akkamaddi.simplecobalt.init.ModItems;
 
-public enum SimpleCobaltArmorMaterial implements IArmorMaterial 
+public enum SimpleCobaltArmorMaterial implements ArmorMaterial 
 {
     COBALT("simplecobalt:cobalt", 24, new int[] {3, 3, 4, 3 }, 8, 
             SoundEvents.ARMOR_EQUIP_IRON, 0.0F,
@@ -38,7 +38,7 @@ public enum SimpleCobaltArmorMaterial implements IArmorMaterial
     private final int enchantability;
     private final SoundEvent soundEvent;
     private final float toughness;
-    private final LazyValue<Ingredient> repairMaterial;
+    private final LazyLoadedValue<Ingredient> repairMaterial;
     
     
     private SimpleCobaltArmorMaterial(String name, int maxDamageFactor, int[] damageReductionAmountArray,
@@ -50,17 +50,17 @@ public enum SimpleCobaltArmorMaterial implements IArmorMaterial
         this.enchantability = enchantability;
         this.soundEvent = soundEvent;
         this.toughness = toughness;
-        this.repairMaterial = new LazyValue<>(repairMaterial);
+        this.repairMaterial = new LazyLoadedValue<>(repairMaterial);
     }
 
     @Override
-    public int getDurabilityForSlot(EquipmentSlotType slotIn)
+    public int getDurabilityForSlot(EquipmentSlot slotIn)
     {
         return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
     }
 
     @Override
-    public int getDefenseForSlot(EquipmentSlotType slotIn)
+    public int getDefenseForSlot(EquipmentSlot slotIn)
     {
         return this.damageReductionAmountArray[slotIn.getIndex()];
     }

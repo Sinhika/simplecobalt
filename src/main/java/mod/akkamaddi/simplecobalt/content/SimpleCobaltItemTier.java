@@ -3,11 +3,11 @@ package mod.akkamaddi.simplecobalt.content;
 import java.util.function.Supplier;
 
 import mod.akkamaddi.simplecobalt.init.ModItems;
-import net.minecraft.item.IItemTier;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.LazyValue;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.util.LazyLoadedValue;
 
-public enum SimpleCobaltItemTier implements IItemTier 
+public enum SimpleCobaltItemTier implements Tier 
 {
     COBALT(2, 960, 7.0F, 2.0F, 8, ()->{ return Ingredient.of( ModItems.cobalt_ingot.get()); }),
     BLUE_DRIFT_STEEL(2, 1240, 13.0F, 2.0F, 16, ()->{ return Ingredient.of( ModItems.blue_drift_steel_ingot.get()); }),
@@ -19,7 +19,7 @@ public enum SimpleCobaltItemTier implements IItemTier
     private final float efficiency;
     private final float attackDamage;
     private final int enchantability;
-    private final LazyValue<Ingredient> repairMaterial;
+    private final LazyLoadedValue<Ingredient> repairMaterial;
     
     
     private SimpleCobaltItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage,
@@ -30,7 +30,7 @@ public enum SimpleCobaltItemTier implements IItemTier
         this.efficiency = efficiency;
         this.attackDamage = attackDamage;
         this.enchantability = enchantability;
-        this.repairMaterial = new LazyValue<>(repairMaterial);
+        this.repairMaterial = new LazyLoadedValue<>(repairMaterial);
     }
 
     @Override

@@ -3,14 +3,14 @@ package mod.akkamaddi.simplecobalt.init;
 import mod.akkamaddi.simplecobalt.SimpleCobalt;
 import mod.akkamaddi.simplecobalt.content.SimpleCobaltArmorMaterial;
 import mod.akkamaddi.simplecobalt.content.SimpleCobaltItemTier;
-import net.minecraft.inventory.EquipmentSlotType;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.AxeItem;
-import net.minecraft.item.HoeItem;
-import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem;
+import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.HoeItem;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.ShovelItem;
+import net.minecraft.world.item.SwordItem;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -127,58 +127,58 @@ public final class ModItems
     // ARMOR
     // cobalt
     public static final RegistryObject<ArmorItem> cobalt_helmet = ITEMS.register("cobalt_helmet",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.COBALT, EquipmentSlotType.HEAD,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.COBALT, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> cobalt_leggings = ITEMS.register("cobalt_leggings",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.COBALT, EquipmentSlotType.LEGS,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.COBALT, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> cobalt_chestplate = ITEMS.register("cobalt_chestplate",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.COBALT, EquipmentSlotType.CHEST,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.COBALT, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> cobalt_boots = ITEMS.register("cobalt_boots",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.COBALT, EquipmentSlotType.FEET,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.COBALT, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
     // cobalt carbide
     public static final RegistryObject<ArmorItem> blue_celadon_helmet = ITEMS.register("blue_celadon_helmet",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_CELADON, EquipmentSlotType.HEAD,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_CELADON, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> blue_celadon_leggings = ITEMS.register("blue_celadon_leggings",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_CELADON, EquipmentSlotType.LEGS,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_CELADON, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> blue_celadon_chestplate = ITEMS.register("blue_celadon_chestplate",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_CELADON, EquipmentSlotType.CHEST,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_CELADON, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> blue_celadon_boots = ITEMS.register("blue_celadon_boots",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_CELADON, EquipmentSlotType.FEET,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_CELADON, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     
     // green_celadon
     public static final RegistryObject<ArmorItem> green_celadon_helmet = ITEMS.register("green_celadon_helmet",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.GREEN_CELADON, EquipmentSlotType.HEAD,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.GREEN_CELADON, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> green_celadon_leggings = ITEMS.register("green_celadon_leggings",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.GREEN_CELADON, EquipmentSlotType.LEGS,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.GREEN_CELADON, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> green_celadon_chestplate = ITEMS.register("green_celadon_chestplate",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.GREEN_CELADON, EquipmentSlotType.CHEST,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.GREEN_CELADON, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> green_celadon_boots = ITEMS.register("green_celadon_boots",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.GREEN_CELADON, EquipmentSlotType.FEET,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.GREEN_CELADON, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
     // cobalt steel
     public static final RegistryObject<ArmorItem> blue_drift_steel_helmet = ITEMS.register("blue_drift_steel_helmet",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_DRIFT_STEEL, EquipmentSlotType.HEAD,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_DRIFT_STEEL, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> blue_drift_steel_leggings = ITEMS.register("blue_drift_steel_leggings",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_DRIFT_STEEL, EquipmentSlotType.LEGS,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_DRIFT_STEEL, EquipmentSlot.LEGS,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> blue_drift_steel_chestplate = ITEMS.register("blue_drift_steel_chestplate",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_DRIFT_STEEL, EquipmentSlotType.CHEST,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_DRIFT_STEEL, EquipmentSlot.CHEST,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<ArmorItem> blue_drift_steel_boots = ITEMS.register("blue_drift_steel_boots",
-            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_DRIFT_STEEL, EquipmentSlotType.FEET,
+            () -> new ArmorItem(SimpleCobaltArmorMaterial.BLUE_DRIFT_STEEL, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
 
 } // end class

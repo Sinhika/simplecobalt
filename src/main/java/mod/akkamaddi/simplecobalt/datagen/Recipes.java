@@ -10,12 +10,12 @@ import mod.akkamaddi.simplecobalt.init.ModTags;
 import mod.alexndr.simplecorelib.datagen.ISimpleConditionBuilder;
 import mod.alexndr.simplecorelib.datagen.RecipeSetBuilder;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.RecipeProvider;
-import net.minecraft.data.ShapedRecipeBuilder;
-import net.minecraft.item.Items;
-import net.minecraft.item.crafting.Ingredient;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.ICondition;
@@ -32,7 +32,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     }
 
     @Override
-    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer)
+    protected void buildShapelessRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);
         registerMiscRecipes(consumer);
@@ -41,7 +41,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         registerFurnaceRecipes(consumer);
     } // end registerRecipes
 
-    private void registerFurnaceRecipes(Consumer<IFinishedRecipe> consumer)
+    private void registerFurnaceRecipes(Consumer<FinishedRecipe> consumer)
     {
         // large chunks
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.cobalt_ore.get()),
@@ -85,7 +85,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         
     } // end registerFurnaceRecipes()
 
-    private void registerArmorRecipes(Consumer<IFinishedRecipe> consumer)
+    private void registerArmorRecipes(Consumer<FinishedRecipe> consumer)
     {
         setbuilder.buildSimpleArmorSet(consumer, Ingredient.of(ModItems.cobalt_ingot.get()), 
                 "cobalt", has(ModItems.cobalt_ingot.get()), flag("cobalt_recipes"));
@@ -97,7 +97,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                 "green_celadon", has(ModItems.green_celadon_ingot.get()), flag("green_celadon_recipes"));
     } // end registerArmorRecipes()
 
-    private void registerToolRecipes(Consumer<IFinishedRecipe> consumer)
+    private void registerToolRecipes(Consumer<FinishedRecipe> consumer)
     {
         setbuilder.buildSimpleToolSet(consumer, Ingredient.of(ModItems.cobalt_ingot.get()), "cobalt",
                 has(ModItems.cobalt_ingot.get()), flag("cobalt_recipes"), false);
@@ -113,7 +113,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
      * pressure plates go here if we ever get any.
      * @param consumer
      */
-    private void registerMiscRecipes(Consumer<IFinishedRecipe> consumer)
+    private void registerMiscRecipes(Consumer<FinishedRecipe> consumer)
     {
         Ingredient stick = Ingredient.of(Tags.Items.RODS_WOODEN);
         ResourceLocation many_rails = new ResourceLocation(SimpleCobalt.MODID, "many_rails");
@@ -152,7 +152,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
      * build and register storage recipes; i.e., nugget => ingot => block conversions.
      * @param consumer
      */
-    private void registerStorageRecipes(Consumer<IFinishedRecipe> consumer)
+    private void registerStorageRecipes(Consumer<FinishedRecipe> consumer)
     {
         // vanilla storage recipes
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.cobalt_ingot.get(), ModBlocks.cobalt_block.get(),
