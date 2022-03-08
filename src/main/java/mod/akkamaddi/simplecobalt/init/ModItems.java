@@ -23,6 +23,8 @@ public final class ModItems
     // Simple Items: ingots, chunks, nuggets
     public static final RegistryObject<Item> cobalt_ingot = ITEMS.register("cobalt_ingot",
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
+    public static final RegistryObject<Item> raw_cobalt = ITEMS.register("raw_cobalt",
+            ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     public static final RegistryObject<Item> cobalt_nugget = ITEMS.register("cobalt_nugget",
             ()-> new Item(new Item.Properties().tab(ModTabGroups.MOD_ITEM_GROUP)));
     

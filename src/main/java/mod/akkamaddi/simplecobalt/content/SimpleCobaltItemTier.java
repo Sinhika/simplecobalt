@@ -1,66 +1,43 @@
 package mod.akkamaddi.simplecobalt.content;
 
-import java.util.function.Supplier;
+import java.util.List;
 
+import mod.akkamaddi.simplecobalt.SimpleCobalt;
 import mod.akkamaddi.simplecobalt.init.ModItems;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.Tag;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.util.LazyLoadedValue;
+import net.minecraft.world.level.block.Block;
+import net.minecraftforge.common.ForgeTier;
+import net.minecraftforge.common.TierSortingRegistry;
 
-public enum SimpleCobaltItemTier implements Tier 
+public final class SimpleCobaltItemTier 
 {
-    COBALT(2, 960, 7.0F, 2.0F, 8, ()->{ return Ingredient.of( ModItems.cobalt_ingot.get()); }),
-    BLUE_DRIFT_STEEL(2, 1240, 13.0F, 2.0F, 16, ()->{ return Ingredient.of( ModItems.blue_drift_steel_ingot.get()); }),
-    BLUE_CELADON(3, 1740, 20.0F, 5.0F, 24, ()->{ return Ingredient.of( ModItems.blue_celadon_ingot.get()); }),
-    GREEN_CELADON(4, 2120, 24.0F, 6.0F, 26, ()->{ return Ingredient.of( ModItems.green_celadon_ingot.get()); });
+    public static final Tag.Named<Block> COBALT_TAG = 
+            BlockTags.createOptional(new ResourceLocation(SimpleCobalt.MODID, "needs_cobalt_tool"));
+    public static final Tag.Named<Block> BLUE_DRIFT_STEEL_TAG = 
+            BlockTags.createOptional(new ResourceLocation(SimpleCobalt.MODID, "needs_blue_drift_steel_tool"));
+    public static final Tag.Named<Block> BLUE_CELADON_TAG = 
+            BlockTags.createOptional(new ResourceLocation(SimpleCobalt.MODID, "needs_blue_celadon_tool"));
+    public static final Tag.Named<Block> GREEN_CELADON_TAG = 
+            BlockTags.createOptional(new ResourceLocation(SimpleCobalt.MODID, "needs_green_celadon_tool"));
     
-    private final int harvestLevel;
-    private final int maxUses;
-    private final float efficiency;
-    private final float attackDamage;
-    private final int enchantability;
-    private final LazyLoadedValue<Ingredient> repairMaterial;
-    
-    
-    private SimpleCobaltItemTier(int harvestLevel, int maxUses, float efficiency, float attackDamage,
-            int enchantability, Supplier<Ingredient> repairMaterial)
-    {
-        this.harvestLevel = harvestLevel;
-        this.maxUses = maxUses;
-        this.efficiency = efficiency;
-        this.attackDamage = attackDamage;
-        this.enchantability = enchantability;
-        this.repairMaterial = new LazyLoadedValue<>(repairMaterial);
-    }
-
-    @Override
-    public int getUses() {
-       return this.maxUses;
-    }
-
-    @Override
-    public float getSpeed() {
-       return this.efficiency;
-    }
-
-    @Override
-    public float getAttackDamageBonus() {
-       return this.attackDamage;
-    }
-
-    @Override
-    public int getLevel() {
-       return this.harvestLevel;
-    }
-
-    @Override
-    public int getEnchantmentValue() {
-       return this.enchantability;
-    }
-
-    @Override
-    public Ingredient getRepairIngredient() {
-       return this.repairMaterial.get();
-    }
-
+    public static final Tier COBALT = TierSortingRegistry.registerTier(
+            new ForgeTier(Tiers.IRON.getLevel(), 960, 7.0F, 2.0F, 8, COBALT_TAG, ()->Ingredient.of( ModItems.cobalt_ingot.get())),
+            new ResourceLocation(SimpleCobalt.MODID, "cobalt"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+            
+    public static final Tier BLUE_DRIFT_STEEL = TierSortingRegistry.registerTier(
+            new ForgeTier(Tiers.IRON.getLevel(), 1240, 13.0F, 2.0F, 16, BLUE_DRIFT_STEEL_TAG, ()->Ingredient.of( ModItems.blue_drift_steel_ingot.get())),
+            new ResourceLocation(SimpleCobalt.MODID, "blue_drift_steel"), List.of(Tiers.IRON), List.of(Tiers.DIAMOND));
+                    
+    public static final Tier BLUE_CELADON = TierSortingRegistry.registerTier(
+            new ForgeTier(Tiers.DIAMOND.getLevel(), 1740, 20.0F, 5.0F, 24, BLUE_CELADON_TAG, ()->Ingredient.of( ModItems.blue_celadon_ingot.get())),
+            new ResourceLocation(SimpleCobalt.MODID, "blue_celadon"), List.of(Tiers.DIAMOND), List.of(Tiers.NETHERITE));
+            
+    public static final Tier GREEN_CELADON = TierSortingRegistry.registerTier(
+            new ForgeTier(Tiers.NETHERITE.getLevel(), 2120, 24.0F, 6.0F, 26, GREEN_CELADON_TAG, ()->Ingredient.of( ModItems.green_celadon_ingot.get())),
+            new ResourceLocation(SimpleCobalt.MODID, "blue_celadon"), List.of(Tiers.NETHERITE), List.of());
 } // end enum class

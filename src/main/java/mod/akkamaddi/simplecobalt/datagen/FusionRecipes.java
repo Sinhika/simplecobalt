@@ -12,12 +12,12 @@ import mod.akkamaddi.simplecobalt.init.ModTags;
 import mod.alexndr.fusion.api.datagen.FusionRecipeSetBuilder;
 import mod.alexndr.fusion.api.recipe.AbstractFusionRecipeProvider;
 import mod.alexndr.simplecorelib.datagen.ISimpleConditionBuilder;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.tags.ItemTags;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.ICondition;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
@@ -32,7 +32,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
     }
 
     @Override
-    protected void buildShapelessRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerCobaltRecyclingRecipes(consumer);
         registerBlueDriftSteelRecipes(consumer);

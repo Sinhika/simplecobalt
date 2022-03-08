@@ -13,9 +13,9 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.ConditionalRecipe;
 import net.minecraftforge.common.crafting.conditions.ICondition;
@@ -32,7 +32,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
     }
 
     @Override
-    protected void buildShapelessRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);
         registerMiscRecipes(consumer);
@@ -46,6 +46,12 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         // large chunks
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.cobalt_ore.get()),
                 ModItems.cobalt_ingot.get(), has(ModBlocks.cobalt_ore.get()), 
+                0.8F, 200, "_from_ore");
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModBlocks.deepslate_cobalt_ore.get()),
+                ModItems.cobalt_ingot.get(), has(ModBlocks.deepslate_cobalt_ore.get()), 
+                0.8F, 200, "_from_deepslate_ore");
+        setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.raw_cobalt.get()),
+                ModItems.cobalt_ingot.get(), has(ModItems.raw_cobalt.get()), 
                 0.8F, 200);
         setbuilder.buildOre2IngotRecipes(consumer, Ingredient.of(ModItems.large_blue_drift_steel_chunk.get()),
                 ModItems.blue_drift_steel_ingot.get(), has(ModItems.large_blue_drift_steel_chunk.get()), 
@@ -163,6 +169,8 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
                 ModItems.blue_celadon_nugget.get(), has(ModItems.blue_celadon_ingot.get()));
         setbuilder.buildSimpleStorageRecipes(consumer, ModItems.green_celadon_ingot.get(), ModBlocks.green_celadon_block.get(),
                 ModItems.green_celadon_nugget.get(), has(ModItems.green_celadon_ingot.get()));
+        setbuilder.buildSimpleStorageRecipes(consumer, ModItems.raw_cobalt.get(), 
+                ModBlocks.raw_cobalt_block.get(), null, has(ModItems.raw_cobalt.get()));
         
         // chunk conversion recipes
         setbuilder.buildChunkConversionRecipes(consumer, ModItems.blue_drift_steel_nugget.get(),
