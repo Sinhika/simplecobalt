@@ -3,7 +3,7 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[36,)" #mandatory
+loaderVersion="[39,)" #mandatory
 issueTrackerURL="https://github.com/Sinhika/simplecobalt/issues"
 license="LGPL 3"
 logoFile="logo.png"
@@ -23,35 +23,35 @@ and Green Celadon.
 [[dependencies.simplecobalt]]
     modId="forge"
     mandatory=true
-    versionRange="[36.1.0,)"
+    versionRange="[39,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simplecobalt]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.16.5,)"
+    versionRange="[1.18.1,1.18.2)"
     ordering="NONE"
     side="BOTH"
     
 [[dependencies.simplecobalt]]
-    modId="simpleores"
-    mandatory=false
-    versionRange="[1.16.5-2.4.7.0,1.16.5-2.4.8.0)"
-    ordering="BEFORE"
+    modId="simplecorelib"
+    mandatory=true
+    versionRange="[1.18.1-4.0.1.0,1.18.2)"
+    ordering="NONE"
     side="BOTH"
 
 [[dependencies.simplecobalt]]
-    modId="simplecorelib"
-    mandatory=true
-    versionRange="[1.16.5-2.0.8.0,1.16.5-2.0.9.0)"
-    ordering="NONE"
+    modId="simpleores"
+    mandatory=false
+    versionRange="[1.18.1-4.0,1.18.2-4.1)"
+    ordering="BEFORE"
     side="BOTH"
 
 [[dependencies.simplecobalt]]
     modId="fusion"
     mandatory=false
-    versionRange="[1.16.5-2.7.4.0,1.16.5-2.7.5.0)"
+    versionRange="[1.18.1-4.0,1.18.2-4.1)"
     ordering="BEFORE"
     side="BOTH"
 
