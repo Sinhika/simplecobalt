@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "simplecobalt:blue_celadon_axe"
+            "items": [
+              "simplecobalt:blue_celadon_axe"
+            ]
           }
         ]
       }

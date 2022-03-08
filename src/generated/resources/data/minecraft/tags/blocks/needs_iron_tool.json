@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "simplecobalt:cobalt_ore",
+    "simplecobalt:deepslate_cobalt_ore",
+    "simplecobalt:cobalt_block",
+    "simplecobalt:raw_cobalt_block",
+    "simplecobalt:blue_drift_steel_block",
+    "simplecobalt:blue_celadon_block",
+    "simplecobalt:green_celadon_block"
+  ]
+}

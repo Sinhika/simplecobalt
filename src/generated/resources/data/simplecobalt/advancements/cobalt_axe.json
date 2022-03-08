@@ -20,7 +20,9 @@
             "conditions": {
               "items": [
                 {
-                  "item": "simplecobalt:cobalt_ingot"
+                  "items": [
+                    "simplecobalt:cobalt_ingot"
+                  ]
                 }
               ]
             }

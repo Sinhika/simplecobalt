@@ -39,5 +39,5 @@ public final class SimpleCobaltItemTier
             
     public static final Tier GREEN_CELADON = TierSortingRegistry.registerTier(
             new ForgeTier(Tiers.NETHERITE.getLevel(), 2120, 24.0F, 6.0F, 26, GREEN_CELADON_TAG, ()->Ingredient.of( ModItems.green_celadon_ingot.get())),
-            new ResourceLocation(SimpleCobalt.MODID, "blue_celadon"), List.of(Tiers.NETHERITE), List.of());
+            new ResourceLocation(SimpleCobalt.MODID, "green_celadon"), List.of(Tiers.NETHERITE), List.of());
 } // end enum class

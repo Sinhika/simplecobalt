@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "simplecobalt:blue_drift_steel_nugget"
+            "items": [
+              "simplecobalt:blue_drift_steel_nugget"
+            ]
           }
         ]
       }

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "simplecobalt:raw_cobalt_block"
+    }
+  ],
+  "result": {
+    "item": "simplecobalt:raw_cobalt",
+    "count": 9
+  }
+}

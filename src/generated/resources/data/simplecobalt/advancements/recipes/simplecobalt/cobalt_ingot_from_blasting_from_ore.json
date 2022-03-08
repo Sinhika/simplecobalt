@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "simplecobalt:cobalt_ingot_from_blasting_from_ore"
+    ]
+  },
+  "criteria": {
+    "cobalt_ingot_from_blasting_from_ore": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simplecobalt:cobalt_ore"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "simplecobalt:cobalt_ingot_from_blasting_from_ore"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "cobalt_ingot_from_blasting_from_ore",
+      "has_the_recipe"
+    ]
+  ]
+}

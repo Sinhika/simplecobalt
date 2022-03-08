@@ -1,7 +1,7 @@
 {
   "type": "minecraft:smelting",
   "ingredient": {
-    "item": "simplecobalt:cobalt_ore"
+    "item": "simplecobalt:raw_cobalt"
   },
   "result": "simplecobalt:cobalt_ingot",
   "experience": 0.8,

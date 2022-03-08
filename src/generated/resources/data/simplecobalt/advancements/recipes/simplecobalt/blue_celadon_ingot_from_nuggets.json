@@ -11,7 +11,9 @@
       "conditions": {
         "items": [
           {
-            "item": "simplecobalt:blue_celadon_ingot"
+            "items": [
+              "simplecobalt:blue_celadon_ingot"
+            ]
           }
         ]
       }
