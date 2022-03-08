@@ -1,8 +1,8 @@
 package mod.akkamaddi.simplecobalt.config;
 
-import net.minecraft.world.level.levelgen.feature.configurations.RangeDecoratorConfiguration;
-import net.minecraftforge.fml.config.ModConfig;
 import mod.alexndr.simplecorelib.config.ModOreConfig;
+import net.minecraft.world.level.levelgen.VerticalAnchor;
+import net.minecraftforge.fml.config.ModConfig;
 
 /**
  * This bakes the config values to normal fields
@@ -20,11 +20,10 @@ public final class ConfigHelper
         SimpleCobaltConfig.addModLootToChests = ConfigHolder.SERVER.serverAddModLootToChests.get();
         
         //SimpleCobaltConfig.cobalt_veinsize = ConfigHolder.SERVER.serverCobaltVeinSize.get();
-        SimpleCobaltConfig.cobalt_cfg = new ModOreConfig(
-                new RangeDecoratorConfiguration( ConfigHolder.SERVER.serverCobaltBottomHeight.get(), 
-                        0, ConfigHolder.SERVER.serverCobaltMaxHeight.get()),
-                ConfigHolder.SERVER.serverCobaltVeinSize.get(),
-                ConfigHolder.SERVER.serverCobaltVeinCount.get());
+        SimpleCobaltConfig.cobalt_cfg = new ModOreConfig(ModOreConfig.TRIANGLE,
+                ConfigHolder.SERVER.serverCobaltVeinSize.get(), ConfigHolder.SERVER.serverCobaltVeinCount.get(), true,
+                VerticalAnchor.absolute(ConfigHolder.SERVER.serverCobaltBottomHeight.get()),
+                VerticalAnchor.absolute(ConfigHolder.SERVER.serverCobaltMaxHeight.get()));
 
         // recipe flags
         SimpleCobaltConfig.INSTANCE.putFlag("cobalt_recipes", ConfigHolder.SERVER.serverEnableCobaltRecipes.get());

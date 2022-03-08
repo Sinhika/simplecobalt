@@ -20,7 +20,9 @@ cd $TARGETDIR
 
 # make simple blockstates
 gen_blockstate_jsons.py --type=simple cobalt_ore
+gen_blockstate_jsons.py --type=simple deepslate_cobalt_ore
 gen_blockstate_jsons.py --type=simple cobalt_block
+gen_blockstate_jsons.py --type=simple raw_cobalt_block
 gen_blockstate_jsons.py --type=simple blue_drift_steel_block
 gen_blockstate_jsons.py --type=simple blue_celadon_block
 gen_blockstate_jsons.py --type=simple green_celadon_block
@@ -34,13 +36,16 @@ cd $TARGETDIR
 
 # block models
 gen_model_jsons.py --type=block cobalt_ore 
+gen_model_jsons.py --type=block deepslate_cobalt_ore 
 gen_model_jsons.py --type=block cobalt_block 
+gen_model_jsons.py --type=block raw_cobalt_block 
 gen_model_jsons.py --type=block blue_drift_steel_block 
 gen_model_jsons.py --type=block blue_celadon_block 
 gen_model_jsons.py --type=block green_celadon_block 
 
 #inventory items
 gen_model_jsons.py --type=inventory --item_only cobalt_ingot
+gen_model_jsons.py --type=inventory --item_only raw_cobalt
 gen_model_jsons.py --type=inventory --item_only cobalt_nugget
 gen_model_jsons.py --type=inventory --item_only blue_drift_steel_ingot
 gen_model_jsons.py --type=inventory --item_only blue_drift_steel_nugget

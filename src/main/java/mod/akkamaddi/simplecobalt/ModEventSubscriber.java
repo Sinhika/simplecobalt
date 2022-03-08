@@ -12,18 +12,19 @@ import mod.akkamaddi.simplecobalt.generation.OreGeneration;
 import mod.akkamaddi.simplecobalt.init.ModBlocks;
 import mod.akkamaddi.simplecobalt.init.ModTabGroups;
 import mod.alexndr.simplecorelib.config.FlagCondition;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.RecipeSerializer;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.crafting.CraftingHelper;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.registries.IForgeRegistry;
+import net.minecraftforge.registries.RegistryObject;
 
 @Mod.EventBusSubscriber(modid = SimpleCobalt.MODID,  bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class ModEventSubscriber
@@ -45,7 +46,7 @@ public final class ModEventSubscriber
 
     
     @SubscribeEvent
-    public static void onModConfigEvent(final ModConfig.ModConfigEvent event)
+    public static void onModConfigEvent(final ModConfigEvent event)
     {
         final ModConfig config = event.getConfig();
 
