@@ -56,11 +56,11 @@ final class ServerConfig
         serverCobaltBottomHeight = builder
                 .comment("Cobalt ore minimum height")
                 .translation(SimpleCobalt.MODID + ".config.serverCobaltBottomHeight")
-                .defineInRange("CobaltBottomHeight", -63, 1, 254);
+                .defineInRange("CobaltBottomHeight", -32, -63, 254);
         serverCobaltMaxHeight = builder
                 .comment("Cobalt ore maximum height")
                 .translation(SimpleCobalt.MODID + ".config.serverCobaltMaxHeight")
-                .defineInRange("CobaltMaxHeight", 32, 1, 255);
+                .defineInRange("CobaltMaxHeight", 32, -63, 255);
         builder.pop();
         builder.pop();
         

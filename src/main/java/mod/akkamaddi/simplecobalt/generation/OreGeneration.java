@@ -18,7 +18,6 @@ import net.minecraftforge.event.world.BiomeLoadingEvent;
  */
 public class OreGeneration
 {
-    // TODO: add deepslate ore
     public static final List<OreConfiguration.TargetBlockState> ORE_COBALT_TARGET_LIST =
             OreGenUtils.BuildStandardOreTargetList(ModBlocks.cobalt_ore.get(), ModBlocks.deepslate_cobalt_ore.get());
     
