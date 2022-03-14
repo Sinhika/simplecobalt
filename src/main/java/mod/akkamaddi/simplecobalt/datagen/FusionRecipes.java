@@ -6,7 +6,6 @@ import java.util.function.Consumer;
 
 import mod.akkamaddi.simplecobalt.SimpleCobalt;
 import mod.akkamaddi.simplecobalt.config.SimpleCobaltConfig;
-import mod.akkamaddi.simplecobalt.init.ModBlocks;
 import mod.akkamaddi.simplecobalt.init.ModItems;
 import mod.akkamaddi.simplecobalt.init.ModTags;
 import mod.alexndr.fusion.api.datagen.FusionRecipeSetBuilder;
@@ -49,7 +48,7 @@ public class FusionRecipes extends AbstractFusionRecipeProvider implements ICond
                 ModItems.cobalt_shovel.get(), ModItems.cobalt_sword.get()),
                 Ingredient.of(ModItems.cobalt_chestplate.get(), ModItems.cobalt_leggings.get()),
                 Ingredient.of(Blocks.GRAVEL), Ingredient.of(ItemTags.COALS), 
-                ModBlocks.cobalt_ore.get(), 15.0F, 600, flag("recycling_recipes"), 
+                ModItems.raw_cobalt.get(), 15.0F, 600, flag("recycling_recipes"), 
                 "recycle_cobalt_items");
         
     } // end registerCobaltRecyclingRecipes
