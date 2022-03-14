@@ -25,6 +25,7 @@ public class ModItemTags extends MiningItemTags
         super.addTags();
         registerNuggetTags();
         registerIngotTags();
+        registerStorageBlockTags();
     }
 
     @Override
@@ -48,6 +49,27 @@ public class ModItemTags extends MiningItemTags
                 List.of());  // netherrack ores
     }
     
+    /**
+     * Create standard forge tags for storage blocks.
+     */
+    private void registerStorageBlockTags()
+    {
+        this.tag(TagUtils.forgeTag("storage_blocks"))
+            .addTag(TagUtils.forgeTag("storage_blocks/cobalt_block"))
+            .addTag(TagUtils.forgeTag("storage_blocks/blue_drift_steel_block"))
+            .addTag(TagUtils.forgeTag("storage_blocks/blue_celadon_block"))
+            .addTag(TagUtils.forgeTag("storage_blocks/green_celadon_block"));
+        
+        this.tag(TagUtils.forgeTag("storage_blocks/cobalt_block"))
+            .add(ModBlocks.cobalt_block.get().asItem());
+        this.tag(TagUtils.forgeTag("storage_blocks/blue_drift_steel_block"))
+            .add(ModBlocks.blue_drift_steel_block.get().asItem());
+        this.tag(TagUtils.forgeTag("storage_blocks/blue_celadon_block"))
+            .add(ModBlocks.blue_celadon_block.get().asItem());
+        this.tag(TagUtils.forgeTag("storage_blocks/green_celadon_block"))
+            .add(ModBlocks.green_celadon_block.get().asItem());
+    } // end registerStorageBlockTags
+
     
     private void registerNuggetTags()
     {
