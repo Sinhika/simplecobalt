@@ -9,6 +9,7 @@ src/generated/resources/.cache/
 *.launch
 *.log
 *.jar
+!gradle/wrapper/*.jar
 *.class
 .project
 .classpath
