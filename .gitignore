@@ -3,7 +3,6 @@ bin/
 build/
 libs/
 src/generated/resources/.cache/
-gradle/
 .settings/
 .gradle/
 .idea/
@@ -14,7 +13,5 @@ gradle/
 .project
 .classpath
 *~
-gradlew
-gradlew.bat
 build.number
 
