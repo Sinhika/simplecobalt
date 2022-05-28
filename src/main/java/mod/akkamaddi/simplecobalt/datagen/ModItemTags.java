@@ -5,8 +5,8 @@ import java.util.List;
 import mod.akkamaddi.simplecobalt.SimpleCobalt;
 import mod.akkamaddi.simplecobalt.init.ModBlocks;
 import mod.akkamaddi.simplecobalt.init.ModItems;
-import mod.alexndr.simplecorelib.datagen.MiningItemTags;
-import mod.alexndr.simplecorelib.helpers.TagUtils;
+import mod.alexndr.simplecorelib.api.datagen.MiningItemTags;
+import mod.alexndr.simplecorelib.api.helpers.TagUtils;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 

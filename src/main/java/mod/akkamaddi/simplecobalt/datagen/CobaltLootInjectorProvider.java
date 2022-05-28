@@ -10,7 +10,7 @@ import com.mojang.datafixers.util.Pair;
 import mod.akkamaddi.simplecobalt.SimpleCobalt;
 import mod.akkamaddi.simplecobalt.init.ModBlocks;
 import mod.akkamaddi.simplecobalt.init.ModItems;
-import mod.alexndr.simplecorelib.datagen.LootTableInjectorProvider;
+import mod.alexndr.simplecorelib.api.datagen.LootTableInjectorProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.LootPool;

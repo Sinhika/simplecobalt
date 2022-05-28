@@ -1,7 +1,5 @@
 package mod.akkamaddi.simplecobalt.config;
 
-import mod.alexndr.simplecorelib.config.ModOreConfig;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraftforge.fml.config.ModConfig;
 
 /**
@@ -19,12 +17,6 @@ public final class ConfigHelper
         SimpleCobaltConfig.enableCobaltOre = ConfigHolder.SERVER.serverEnableCobaltOre.get();
         SimpleCobaltConfig.addModLootToChests = ConfigHolder.SERVER.serverAddModLootToChests.get();
         
-        //SimpleCobaltConfig.cobalt_veinsize = ConfigHolder.SERVER.serverCobaltVeinSize.get();
-        SimpleCobaltConfig.cobalt_cfg = new ModOreConfig(ModOreConfig.TRIANGLE,
-                ConfigHolder.SERVER.serverCobaltVeinSize.get(), ConfigHolder.SERVER.serverCobaltVeinCount.get(), true,
-                VerticalAnchor.absolute(ConfigHolder.SERVER.serverCobaltBottomHeight.get()),
-                VerticalAnchor.absolute(ConfigHolder.SERVER.serverCobaltMaxHeight.get()));
-
         // recipe flags
         SimpleCobaltConfig.INSTANCE.putFlag("cobalt_recipes", ConfigHolder.SERVER.serverEnableCobaltRecipes.get());
         SimpleCobaltConfig.INSTANCE.putFlag("blue_celadon_recipes", ConfigHolder.SERVER.serverEnableBlueCeladonRecipes.get());

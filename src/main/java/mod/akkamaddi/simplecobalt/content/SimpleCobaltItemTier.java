@@ -6,7 +6,7 @@ import mod.akkamaddi.simplecobalt.SimpleCobalt;
 import mod.akkamaddi.simplecobalt.init.ModItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.Tag;
+import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -16,14 +16,14 @@ import net.minecraftforge.common.TierSortingRegistry;
 
 public final class SimpleCobaltItemTier 
 {
-    public static final Tag.Named<Block> COBALT_TAG = 
-            BlockTags.createOptional(new ResourceLocation(SimpleCobalt.MODID, "needs_cobalt_tool"));
-    public static final Tag.Named<Block> BLUE_DRIFT_STEEL_TAG = 
-            BlockTags.createOptional(new ResourceLocation(SimpleCobalt.MODID, "needs_blue_drift_steel_tool"));
-    public static final Tag.Named<Block> BLUE_CELADON_TAG = 
-            BlockTags.createOptional(new ResourceLocation(SimpleCobalt.MODID, "needs_blue_celadon_tool"));
-    public static final Tag.Named<Block> GREEN_CELADON_TAG = 
-            BlockTags.createOptional(new ResourceLocation(SimpleCobalt.MODID, "needs_green_celadon_tool"));
+    public static final TagKey<Block> COBALT_TAG = 
+            BlockTags.create(new ResourceLocation(SimpleCobalt.MODID, "needs_cobalt_tool"));
+    public static final TagKey<Block> BLUE_DRIFT_STEEL_TAG = 
+            BlockTags.create(new ResourceLocation(SimpleCobalt.MODID, "needs_blue_drift_steel_tool"));
+    public static final TagKey<Block> BLUE_CELADON_TAG = 
+            BlockTags.create(new ResourceLocation(SimpleCobalt.MODID, "needs_blue_celadon_tool"));
+    public static final TagKey<Block> GREEN_CELADON_TAG = 
+            BlockTags.create(new ResourceLocation(SimpleCobalt.MODID, "needs_green_celadon_tool"));
     
     public static final Tier COBALT = TierSortingRegistry.registerTier(
             new ForgeTier(Tiers.IRON.getLevel(), 960, 7.0F, 2.0F, 8, COBALT_TAG, ()->Ingredient.of( ModItems.cobalt_ingot.get())),

@@ -10,7 +10,7 @@ import mod.akkamaddi.simplecobalt.init.ModItems;
 import mod.akkamaddi.simplecobalt.init.ModTags;
 import mod.alexndr.fusion.api.datagen.FusionRecipeSetBuilder;
 import mod.alexndr.fusion.api.recipe.AbstractFusionRecipeProvider;
-import mod.alexndr.simplecorelib.datagen.ISimpleConditionBuilder;
+import mod.alexndr.simplecorelib.api.datagen.ISimpleConditionBuilder;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.tags.ItemTags;

@@ -8,10 +8,9 @@ import org.apache.logging.log4j.Logger;
 import mod.akkamaddi.simplecobalt.config.ConfigHelper;
 import mod.akkamaddi.simplecobalt.config.ConfigHolder;
 import mod.akkamaddi.simplecobalt.config.SimpleCobaltConfig;
-import mod.akkamaddi.simplecobalt.generation.OreGeneration;
 import mod.akkamaddi.simplecobalt.init.ModBlocks;
 import mod.akkamaddi.simplecobalt.init.ModTabGroups;
-import mod.alexndr.simplecorelib.config.FlagCondition;
+import mod.alexndr.simplecorelib.api.config.FlagCondition;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -38,11 +37,7 @@ public final class ModEventSubscriber
     @SubscribeEvent
     public static void onCommonSetup(final FMLCommonSetupEvent event)
     {
-        event.enqueueWork(() -> {
-            OreGeneration.initOverworldFeatures();
-        });
-        LOGGER.debug("Common setup done");
-    } // end onCommonSetup
+     } // end onCommonSetup
 
     
     @SubscribeEvent
