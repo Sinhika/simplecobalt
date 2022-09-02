@@ -1,0 +1,6 @@
+{
+	"type" : "forge:add_features",
+	"biomes" : "#minecraft:is_overworld",
+	"features" : "simplecobalt:ore_cobalt_deposit",
+	"step" : "underground_ores"
+}
