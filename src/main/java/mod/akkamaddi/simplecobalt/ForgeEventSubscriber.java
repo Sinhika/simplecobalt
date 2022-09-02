@@ -60,9 +60,9 @@ public final class ForgeEventSubscriber
     public static void onLivingAttackEvent(LivingAttackEvent event)
     {
         // first, is it a player?
-        if (event.getEntityLiving() instanceof Player)
+        if (event.getEntity() instanceof Player)
         {
-            Player player = (Player) event.getEntityLiving();
+            Player player = (Player) event.getEntity();
             LOGGER.debug("caught LivingAttackEvent");
 
             // falling anvils and other impact damage, wearing full suit of tungsten carbide?
