@@ -1,6 +1,8 @@
 {
   "pack": {
-    "pack_format": 8,
-    "description": "Resources for akkamaddi's Simple Cobalt"
+    "description": "Resources for akkamaddi's Simple Cobalt",
+   "pack_format": 9,
+     "forge:resource_pack_format": 9,
+     "forge:data_pack_format": 10  
   }
 }

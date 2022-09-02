@@ -14,7 +14,7 @@ public final class ConfigHelper
 
     public static void bakeServer(final ModConfig config)
     {
-        SimpleCobaltConfig.enableCobaltOre = ConfigHolder.SERVER.serverEnableCobaltOre.get();
+//        SimpleCobaltConfig.enableCobaltOre = ConfigHolder.SERVER.serverEnableCobaltOre.get();
         SimpleCobaltConfig.addModLootToChests = ConfigHolder.SERVER.serverAddModLootToChests.get();
         
         // recipe flags

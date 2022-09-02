@@ -2,7 +2,7 @@ package mod.akkamaddi.simplecobalt.init;
 
 import mod.akkamaddi.simplecobalt.SimpleCobalt;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.OreBlock;
+import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 import net.minecraftforge.registries.DeferredRegister;
@@ -26,11 +26,11 @@ public final class ModBlocks
             DeferredRegister.create(ForgeRegistries.BLOCKS, SimpleCobalt.MODID);
 
     // Ore Block
-    public static final RegistryObject<OreBlock> cobalt_ore = BLOCKS.register("cobalt_ore",
-            () -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> cobalt_ore = BLOCKS.register("cobalt_ore",
+            () -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 4.0F, 10.0F).requiresCorrectToolForDrops()));
-    public static final RegistryObject<OreBlock> deepslate_cobalt_ore = BLOCKS.register("deepslate_cobalt_ore",
-            () -> new OreBlock(Block.Properties.of(Material.STONE)
+    public static final RegistryObject<DropExperienceBlock> deepslate_cobalt_ore = BLOCKS.register("deepslate_cobalt_ore",
+            () -> new DropExperienceBlock(Block.Properties.of(Material.STONE)
                     .strength( 4.0F, 10.0F).requiresCorrectToolForDrops()));
     
     // Storage Blocks

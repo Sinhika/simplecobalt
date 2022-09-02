@@ -4,9 +4,9 @@ import static net.minecraftforge.fml.common.Mod.EventBusSubscriber.Bus.MOD;
 
 import mod.akkamaddi.simplecobalt.SimpleCobalt;
 import net.minecraft.data.DataGenerator;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
-import net.minecraftforge.data.event.GatherDataEvent;
 
 /**
  * bundles up the GatherDataEvent handler and all the necessary data providers for
@@ -23,15 +23,12 @@ import net.minecraftforge.data.event.GatherDataEvent;
     public static void gatherData(GatherDataEvent event)
     {
         DataGenerator gen = event.getGenerator();
-        if (event.includeServer())
-        {
-            gen.addProvider(new Recipes(gen));
-            gen.addProvider(new FusionRecipes(gen));
-            gen.addProvider(new ModItemTags(gen, event.getExistingFileHelper()));
-            gen.addProvider(new ModBlockTags(gen, event.getExistingFileHelper()));
-            gen.addProvider(new CobaltLootTableProvider(gen));
-            gen.addProvider(new CobaltLootInjectorProvider(gen));
-        }
+        gen.addProvider(event.includeServer(), new Recipes(gen));
+        gen.addProvider(event.includeServer(), new FusionRecipes(gen));
+        gen.addProvider(event.includeServer(), new ModItemTags(gen, event.getExistingFileHelper()));
+        gen.addProvider(event.includeServer(), new ModBlockTags(gen, event.getExistingFileHelper()));
+        gen.addProvider(event.includeServer(), new CobaltLootTableProvider(gen));
+        gen.addProvider(event.includeServer(), new CobaltLootInjectorProvider(gen));
     } // end gatherData()
 
     
