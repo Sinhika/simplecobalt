@@ -12,12 +12,6 @@ import net.minecraftforge.common.ForgeConfigSpec;
  */
 final class ServerConfig
 {
-//    final ForgeConfigSpec.BooleanValue serverEnableCobaltOre;
-//    final ForgeConfigSpec.IntValue serverCobaltVeinSize;
-//    final ForgeConfigSpec.IntValue serverCobaltVeinCount;
-//    final ForgeConfigSpec.IntValue serverCobaltBottomHeight;
-//    final ForgeConfigSpec.IntValue serverCobaltMaxHeight;
-    
     final ForgeConfigSpec.BooleanValue serverEnableCobaltRecipes;
     final ForgeConfigSpec.BooleanValue serverEnableBlueDriftSteelRecipes;
     final ForgeConfigSpec.BooleanValue serverEnableBlueCeladonRecipes;
@@ -39,31 +33,6 @@ final class ServerConfig
             .define("EnableRecycling", true);
 	    builder.pop();
 	    
-//	    builder.push("OreGeneration");
-//	    serverEnableCobaltOre = builder
-//                .comment("Enable cobalt ore generation?")
-//                .translation(SimpleCobalt.MODID + ".config.enableCobaltOre")
-//                .define("EnableCobaltOre", true);
-//        builder.push("Cobalt");
-//        serverCobaltVeinSize = builder
-//                .comment("Cobalt ore vein size")
-//                .translation(SimpleCobalt.MODID + ".config.serverCobaltVeinSize")
-//                .defineInRange("CobaltVeinSize", 6, 1, Integer.MAX_VALUE);
-//        serverCobaltVeinCount = builder
-//                .comment("Cobalt ore vein count per chunk")
-//                .translation(SimpleCobalt.MODID + ".config.serverCobaltVeinCount")
-//                .defineInRange("CobaltVeinCount", 6, 1, Integer.MAX_VALUE);
-//        serverCobaltBottomHeight = builder
-//                .comment("Cobalt ore minimum height")
-//                .translation(SimpleCobalt.MODID + ".config.serverCobaltBottomHeight")
-//                .defineInRange("CobaltBottomHeight", -32, -63, 254);
-//        serverCobaltMaxHeight = builder
-//                .comment("Cobalt ore maximum height")
-//                .translation(SimpleCobalt.MODID + ".config.serverCobaltMaxHeight")
-//                .defineInRange("CobaltMaxHeight", 32, -63, 255);
-//        builder.pop();
-//        builder.pop();
-        
         builder.push("Recipes");
         serverEnableCobaltRecipes = builder.comment("false disables recipes")
                 .translation(SimpleCobalt.MODID + ".config.enableCobaltRecipes")
