@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "blue_drift_steel_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "blue_drift_steel_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:lapis_lazuli"
+        },
+        "cookingtime": 600,
+        "experience": 24.0,
         "inputs": [
           {
             "tag": "forge:ingots/cobalt"
@@ -18,14 +23,9 @@
             "item": "minecraft:iron_ingot"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:lapis_lazuli"
-        },
         "output": {
           "item": "simplecobalt:large_blue_drift_steel_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 24.0
+        }
       }
     }
   ]

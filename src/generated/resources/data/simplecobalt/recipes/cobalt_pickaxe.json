@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "cobalt_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "cobalt_recipes"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SSS",
-          " T ",
-          " T "
-        ],
         "key": {
           "S": {
             "item": "simplecobalt:cobalt_ingot"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          "SSS",
+          " T ",
+          " T "
+        ],
         "result": {
           "item": "simplecobalt:cobalt_pickaxe"
         }

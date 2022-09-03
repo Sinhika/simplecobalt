@@ -4,22 +4,22 @@
     {
       "conditions": [
         {
-          "flag": "green_celadon_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "green_celadon_recipes"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SSS",
-          "S S",
-          "   "
-        ],
         "key": {
           "S": {
             "item": "simplecobalt:green_celadon_ingot"
           }
         },
+        "pattern": [
+          "SSS",
+          "S S",
+          "   "
+        ],
         "result": {
           "item": "simplecobalt:green_celadon_helmet"
         }

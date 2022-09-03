@@ -5,7 +5,6 @@ import org.apache.logging.log4j.Logger;
 
 import mod.akkamaddi.simplecobalt.config.ConfigHolder;
 import mod.akkamaddi.simplecobalt.init.ModBlocks;
-import mod.akkamaddi.simplecobalt.init.ModFeatures;
 import mod.akkamaddi.simplecobalt.init.ModItems;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;

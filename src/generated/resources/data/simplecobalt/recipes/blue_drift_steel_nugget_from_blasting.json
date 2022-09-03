@@ -1,5 +1,7 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 0.9,
   "ingredient": [
     {
       "item": "simplecobalt:blue_drift_steel_axe"
@@ -26,7 +28,5 @@
       "item": "simplecobalt:blue_drift_steel_sword"
     }
   ],
-  "result": "simplecobalt:blue_drift_steel_nugget",
-  "experience": 0.9,
-  "cookingtime": 100
+  "result": "simplecobalt:blue_drift_steel_nugget"
 }

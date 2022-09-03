@@ -1,22 +1,10 @@
 {
   "advancements": [
     {
-      "conditions": [
-        {
-          "flag": "blue_drift_steel_recipes",
-          "type": "simplecobalt:flag"
-        }
-      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
-        "rewards": {
-          "recipes": [
-            "simplecobalt:many_more_rails"
-          ]
-        },
         "criteria": {
           "has_item": {
-            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -25,15 +13,27 @@
                   ]
                 }
               ]
-            }
+            },
+            "trigger": "minecraft:inventory_changed"
           }
         },
         "requirements": [
           [
             "has_item"
           ]
-        ]
-      }
+        ],
+        "rewards": {
+          "recipes": [
+            "simplecobalt:many_more_rails"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "simplecobalt:flag",
+          "flag": "blue_drift_steel_recipes"
+        }
+      ]
     }
   ]
 }

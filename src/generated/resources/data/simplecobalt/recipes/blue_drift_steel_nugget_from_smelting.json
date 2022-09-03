@@ -1,5 +1,7 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.9,
   "ingredient": [
     {
       "item": "simplecobalt:blue_drift_steel_axe"
@@ -26,7 +28,5 @@
       "item": "simplecobalt:blue_drift_steel_sword"
     }
   ],
-  "result": "simplecobalt:blue_drift_steel_nugget",
-  "experience": 0.9,
-  "cookingtime": 200
+  "result": "simplecobalt:blue_drift_steel_nugget"
 }

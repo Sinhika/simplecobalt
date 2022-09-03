@@ -1,5 +1,7 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 1.4,
   "ingredient": [
     {
       "item": "simplecobalt:green_celadon_axe"
@@ -26,7 +28,5 @@
       "item": "simplecobalt:green_celadon_sword"
     }
   ],
-  "result": "simplecobalt:green_celadon_nugget",
-  "experience": 1.4,
-  "cookingtime": 200
+  "result": "simplecobalt:green_celadon_nugget"
 }

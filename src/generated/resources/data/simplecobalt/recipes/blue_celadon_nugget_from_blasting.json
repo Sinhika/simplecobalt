@@ -1,5 +1,7 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
+  "experience": 1.0,
   "ingredient": [
     {
       "item": "simplecobalt:blue_celadon_axe"
@@ -26,7 +28,5 @@
       "item": "simplecobalt:blue_celadon_sword"
     }
   ],
-  "result": "simplecobalt:blue_celadon_nugget",
-  "experience": 1.0,
-  "cookingtime": 100
+  "result": "simplecobalt:blue_celadon_nugget"
 }

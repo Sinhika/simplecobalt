@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "blue_drift_steel_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "blue_drift_steel_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "cookingtime": 600,
+        "experience": 6.0,
         "inputs": [
           {
             "tag": "forge:ingots/cobalt"
@@ -18,14 +23,9 @@
             "item": "minecraft:iron_ingot"
           }
         ],
-        "catalyst": {
-          "tag": "minecraft:coals"
-        },
         "output": {
           "item": "simplecobalt:blue_drift_steel_nugget"
-        },
-        "cookingtime": 600,
-        "experience": 6.0
+        }
       }
     }
   ]

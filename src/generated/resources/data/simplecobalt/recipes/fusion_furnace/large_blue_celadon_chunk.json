@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "blue_celadon_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "blue_celadon_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:glowstone_dust"
+        },
+        "cookingtime": 600,
+        "experience": 32.0,
         "inputs": [
           {
             "tag": "forge:ingots/cobalt"
@@ -18,14 +23,9 @@
             "tag": "forge:ingots/mythril"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:glowstone_dust"
-        },
         "output": {
           "item": "simplecobalt:large_blue_celadon_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 32.0
+        }
       }
     }
   ]

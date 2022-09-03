@@ -1,22 +1,10 @@
 {
   "advancements": [
     {
-      "conditions": [
-        {
-          "flag": "cobalt_recipes",
-          "type": "simplecobalt:flag"
-        }
-      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
-        "rewards": {
-          "recipes": [
-            "simplecobalt:cobalt_axe"
-          ]
-        },
         "criteria": {
           "has_item": {
-            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -25,15 +13,27 @@
                   ]
                 }
               ]
-            }
+            },
+            "trigger": "minecraft:inventory_changed"
           }
         },
         "requirements": [
           [
             "has_item"
           ]
-        ]
-      }
+        ],
+        "rewards": {
+          "recipes": [
+            "simplecobalt:cobalt_axe"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "simplecobalt:flag",
+          "flag": "cobalt_recipes"
+        }
+      ]
     }
   ]
 }

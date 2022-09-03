@@ -1,5 +1,7 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.8,
   "ingredient": [
     {
       "item": "simplecobalt:cobalt_axe"
@@ -29,7 +31,5 @@
       "item": "simplecobalt:cobalt_sword"
     }
   ],
-  "result": "simplecobalt:cobalt_nugget",
-  "experience": 0.8,
-  "cookingtime": 200
+  "result": "simplecobalt:cobalt_nugget"
 }

@@ -1,22 +1,10 @@
 {
   "advancements": [
     {
-      "conditions": [
-        {
-          "flag": "green_celadon_recipes",
-          "type": "simplecobalt:flag"
-        }
-      ],
       "advancement": {
         "parent": "minecraft:recipes/root",
-        "rewards": {
-          "recipes": [
-            "simplecobalt:green_celadon_hoe"
-          ]
-        },
         "criteria": {
           "has_item": {
-            "trigger": "minecraft:inventory_changed",
             "conditions": {
               "items": [
                 {
@@ -25,15 +13,27 @@
                   ]
                 }
               ]
-            }
+            },
+            "trigger": "minecraft:inventory_changed"
           }
         },
         "requirements": [
           [
             "has_item"
           ]
-        ]
-      }
+        ],
+        "rewards": {
+          "recipes": [
+            "simplecobalt:green_celadon_hoe"
+          ]
+        }
+      },
+      "conditions": [
+        {
+          "type": "simplecobalt:flag",
+          "flag": "green_celadon_recipes"
+        }
+      ]
     }
   ]
 }

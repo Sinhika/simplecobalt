@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "blue_drift_steel_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "blue_drift_steel_recipes"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          " S ",
-          " T ",
-          " T "
-        ],
         "key": {
           "S": {
             "item": "simplecobalt:blue_drift_steel_ingot"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          " S ",
+          " T ",
+          " T "
+        ],
         "result": {
           "item": "simplecobalt:blue_drift_steel_shovel"
         }

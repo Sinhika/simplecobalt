@@ -4,22 +4,22 @@
     {
       "conditions": [
         {
-          "flag": "cobalt_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "cobalt_recipes"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "SSS",
-          "S S",
-          "   "
-        ],
         "key": {
           "S": {
             "item": "simplecobalt:cobalt_ingot"
           }
         },
+        "pattern": [
+          "SSS",
+          "S S",
+          "   "
+        ],
         "result": {
           "item": "simplecobalt:cobalt_helmet"
         }

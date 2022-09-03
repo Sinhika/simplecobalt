@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "recycling_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "recycling_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "tag": "minecraft:coals"
+        },
+        "cookingtime": 600,
+        "experience": 30.0,
         "inputs": [
           [
             {
@@ -23,15 +28,10 @@
             "item": "minecraft:gravel"
           }
         ],
-        "catalyst": {
-          "tag": "minecraft:coals"
-        },
         "output": {
-          "item": "simplecobalt:large_blue_drift_steel_chunk",
-          "count": 2
-        },
-        "cookingtime": 600,
-        "experience": 30.0
+          "count": 2,
+          "item": "simplecobalt:large_blue_drift_steel_chunk"
+        }
       }
     }
   ]

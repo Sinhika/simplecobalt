@@ -4,22 +4,22 @@
     {
       "conditions": [
         {
-          "flag": "cobalt_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "cobalt_recipes"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "   ",
-          "S S",
-          "S S"
-        ],
         "key": {
           "S": {
             "item": "simplecobalt:cobalt_ingot"
           }
         },
+        "pattern": [
+          "   ",
+          "S S",
+          "S S"
+        ],
         "result": {
           "item": "simplecobalt:cobalt_boots"
         }

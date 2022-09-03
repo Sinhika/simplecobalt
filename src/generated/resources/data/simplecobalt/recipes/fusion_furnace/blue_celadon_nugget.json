@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "blue_celadon_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "blue_celadon_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:redstone"
+        },
+        "cookingtime": 600,
+        "experience": 8.0,
         "inputs": [
           {
             "tag": "forge:ingots/cobalt"
@@ -18,14 +23,9 @@
             "tag": "forge:ingots/mythril"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:redstone"
-        },
         "output": {
           "item": "simplecobalt:blue_celadon_nugget"
-        },
-        "cookingtime": 600,
-        "experience": 8.0
+        }
       }
     }
   ]

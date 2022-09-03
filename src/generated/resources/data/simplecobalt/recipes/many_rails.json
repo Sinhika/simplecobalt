@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "cobalt_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "cobalt_recipes"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "X X",
-          "XYX",
-          "X X"
-        ],
         "key": {
           "X": {
             "tag": "forge:ingots/cobalt"
@@ -23,9 +18,14 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          "X X",
+          "XYX",
+          "X X"
+        ],
         "result": {
-          "item": "minecraft:rail",
-          "count": 24
+          "count": 24,
+          "item": "minecraft:rail"
         }
       }
     }

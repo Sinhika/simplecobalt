@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "recycling_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "recycling_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:lava_bucket"
+        },
+        "cookingtime": 600,
+        "experience": 20.0,
         "inputs": [
           [
             {
@@ -35,14 +40,9 @@
             "item": "minecraft:gravel"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:lava_bucket"
-        },
         "output": {
           "item": "simplecobalt:large_green_celadon_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 20.0
+        }
       }
     }
   ]

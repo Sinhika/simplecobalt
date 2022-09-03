@@ -4,17 +4,12 @@
     {
       "conditions": [
         {
-          "flag": "green_celadon_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "green_celadon_recipes"
         }
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
-        "pattern": [
-          " S ",
-          " T ",
-          " T "
-        ],
         "key": {
           "S": {
             "item": "simplecobalt:green_celadon_ingot"
@@ -23,6 +18,11 @@
             "tag": "forge:rods/wooden"
           }
         },
+        "pattern": [
+          " S ",
+          " T ",
+          " T "
+        ],
         "result": {
           "item": "simplecobalt:green_celadon_shovel"
         }

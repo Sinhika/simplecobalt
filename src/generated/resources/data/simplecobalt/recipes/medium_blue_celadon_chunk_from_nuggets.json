@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "SS",
-    "SS"
-  ],
   "key": {
     "S": {
       "item": "simplecobalt:blue_celadon_nugget"
     }
   },
+  "pattern": [
+    "SS",
+    "SS"
+  ],
   "result": {
     "item": "simplecobalt:medium_blue_celadon_chunk"
   }

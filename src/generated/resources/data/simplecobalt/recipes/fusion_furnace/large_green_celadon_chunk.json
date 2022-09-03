@@ -4,12 +4,17 @@
     {
       "conditions": [
         {
-          "flag": "green_celadon_recipes",
-          "type": "simplecobalt:flag"
+          "type": "simplecobalt:flag",
+          "flag": "green_celadon_recipes"
         }
       ],
       "recipe": {
         "type": "fusion:alloying",
+        "catalyst": {
+          "item": "minecraft:emerald"
+        },
+        "cookingtime": 600,
+        "experience": 40.0,
         "inputs": [
           {
             "tag": "forge:ingots/cobalt"
@@ -18,14 +23,9 @@
             "tag": "forge:ingots/adamantium"
           }
         ],
-        "catalyst": {
-          "item": "minecraft:emerald"
-        },
         "output": {
           "item": "simplecobalt:large_green_celadon_chunk"
-        },
-        "cookingtime": 600,
-        "experience": 40.0
+        }
       }
     }
   ]
