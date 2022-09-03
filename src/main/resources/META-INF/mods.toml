@@ -3,7 +3,7 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[41,)" #mandatory
+loaderVersion="[43,)" #mandatory
 issueTrackerURL="https://github.com/Sinhika/simplecobalt/issues"
 license="LGPL 3"
 logoFile="logo.png"
@@ -12,7 +12,7 @@ logoFile="logo.png"
 modId="simplecobalt"
 version="${file.jarVersion}"
 displayName="akkamaddi's Simple Cobalt"
-updateJSONURL="https://raw.githubusercontent.com/Sinhika/simplecobalt/1.18/update.json"
+updateJSONURL="https://raw.githubusercontent.com/Sinhika/simplecobalt/1.19/update.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/simple-cobalt"
 credits="Created by akkamaddi, reliant on AleXndrTheGr8st. Maintained by Sinhika."
 authors="akkamaddi, Sinhika"
@@ -23,35 +23,35 @@ and Green Celadon.
 [[dependencies.simplecobalt]]
     modId="forge"
     mandatory=true
-    versionRange="[41.1,)"
+    versionRange="[43.1,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simplecobalt]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19,1.19.1)"
+    versionRange="[1.19.2, 1.19.3)"
     ordering="NONE"
     side="BOTH"
     
 [[dependencies.simplecobalt]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.19-5.0.1.9, 1.19.2-5.1.0.2)"
+    versionRange="[1.19.2-5.1.0.2, 1.19.2-5.2.0.0)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.simplecobalt]]
     modId="simpleores"
     mandatory=false
-    versionRange="[1.19-5.0.0.0, 1.19.2-5.1.0.0)"
+    versionRange="[1.19.2-5.1.0.0, 1.19.2-5.2.0.0)"
     ordering="BEFORE"
     side="BOTH"
 
 [[dependencies.simplecobalt]]
     modId="fusion"
     mandatory=false
-    versionRange="[1.19-5.0.0.0, 1.19.2-5.1.0.0)"
+    versionRange="[1.19.2-5.1.0.0, 1.19.2-5.2.0.0)"
     ordering="BEFORE"
     side="BOTH"
 
