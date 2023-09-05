@@ -3,16 +3,16 @@
 modLoader="javafml" #mandatory
 
 # A version range to match for said mod loader - for regular FML @Mod it will be the forge version
-loaderVersion="[43,)" #mandatory
+loaderVersion="${loader_version_range}" #mandatory
 issueTrackerURL="https://github.com/Sinhika/simplecobalt/issues"
-license="LGPL 3"
+license="${mod_license}"
 logoFile="logo.png"
 
 [[mods]]
-modId="simplecobalt"
-version="${file.jarVersion}"
-displayName="akkamaddi's Simple Cobalt"
-updateJSONURL="https://raw.githubusercontent.com/Sinhika/simplecobalt/1.19/update.json"
+modId="${mod_id}"
+version="${version}"
+displayName="${mod_name}"
+updateJSONURL="https://raw.githubusercontent.com/Sinhika/simplecobalt/1.20/update.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/simple-cobalt"
 credits="Created by akkamaddi, reliant on AleXndrTheGr8st. Maintained by Sinhika."
 authors="akkamaddi, Sinhika"
@@ -20,38 +20,38 @@ description='''
 Cobalt Ore and Cobalt Metal, with the alloys Blue Drift Steel, Blue Celadon,
 and Green Celadon.
 '''
-[[dependencies.simplecobalt]]
+[[dependencies.${mod_id}]]
     modId="forge"
     mandatory=true
-    versionRange="[43.1,)"
+    versionRange="${forge_version_range}"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.simplecobalt]]
+[[dependencies.${mod_id}]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.2, 1.19.3)"
+    versionRange="${minecraft_version_range}"
     ordering="NONE"
     side="BOTH"
     
-[[dependencies.simplecobalt]]
+[[dependencies.${mod_id}]]
     modId="simplecorelib"
     mandatory=true
-    versionRange="[1.19.2-5.1.0.2, 1.19.2-5.2.0.0)"
+    versionRange="${simplecore_range}"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.simplecobalt]]
+[[dependencies.${mod_id}]]
     modId="simpleores"
     mandatory=false
-    versionRange="[1.19.2-5.1.0.0, 1.19.2-5.2.0.0)"
+    versionRange="${simpleores_range}"
     ordering="BEFORE"
     side="BOTH"
 
-[[dependencies.simplecobalt]]
+[[dependencies.${mod_id}]]
     modId="fusion"
     mandatory=false
-    versionRange="[1.19.2-5.1.0.0, 1.19.2-5.2.0.0)"
+    versionRange="${fusion_range}"
     ordering="BEFORE"
     side="BOTH"
 
