@@ -8,7 +8,7 @@ import mod.akkamaddi.simplecobalt.SimpleCobalt;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 
-public final class ModTabGroups
+public final class ModCreativeTabs
 {
     public static final CreativeModeTab MOD_ITEM_GROUP =
             new ModTabGroup(SimpleCobalt.MODID, () -> new ItemStack(ModBlocks.cobalt_ore.get()));
