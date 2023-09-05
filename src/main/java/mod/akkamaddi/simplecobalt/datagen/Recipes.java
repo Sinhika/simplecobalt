@@ -9,8 +9,9 @@ import mod.akkamaddi.simplecobalt.init.ModItems;
 import mod.akkamaddi.simplecobalt.init.ModTags;
 import mod.alexndr.simplecorelib.api.datagen.ISimpleConditionBuilder;
 import mod.alexndr.simplecorelib.api.datagen.RecipeSetBuilder;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
@@ -25,14 +26,14 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
 {
     private RecipeSetBuilder setbuilder;
 
-    public Recipes(DataGenerator generatorIn)
+    public Recipes(PackOutput pOutput)
     {
-        super(generatorIn);
+        super(pOutput);
         setbuilder = new RecipeSetBuilder(SimpleCobalt.MODID);
     }
 
     @Override
-    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer)
+    protected void buildRecipes(Consumer<FinishedRecipe> consumer)
     {
         registerStorageRecipes(consumer);
         registerMiscRecipes(consumer);
@@ -126,7 +127,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
         ResourceLocation many_more_rails = new ResourceLocation(SimpleCobalt.MODID, "many_more_rails");
         
         ConditionalRecipe.builder().addCondition(flag("cobalt_recipes"))
-            .addRecipe( ShapedRecipeBuilder.shaped(Items.RAIL, 24)
+            .addRecipe( ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, Items.RAIL, 24)
                         .define('X', Ingredient.of(ModTags.Items.INGOTS_COBALT))
                         .define('Y', stick)
                         .pattern("X X")
@@ -138,7 +139,7 @@ public class Recipes extends RecipeProvider implements IConditionBuilder, ISimpl
             .build(consumer, many_rails);
         
         ConditionalRecipe.builder().addCondition(flag("blue_drift_steel_recipes"))
-            .addRecipe( ShapedRecipeBuilder.shaped(Items.RAIL, 44)
+            .addRecipe( ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, Items.RAIL, 44)
                         .define('X', Ingredient.of(ModItems.blue_drift_steel_ingot.get()))
                         .define('Y', stick)
                         .pattern("X X")

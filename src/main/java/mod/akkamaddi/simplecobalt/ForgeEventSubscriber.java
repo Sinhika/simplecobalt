@@ -9,6 +9,7 @@ import mod.akkamaddi.simplecobalt.loot.SimpleCobaltInjectionLookup;
 import mod.alexndr.simplecorelib.api.helpers.ArmorUtils;
 import mod.alexndr.simplecorelib.api.helpers.LootUtils;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.LootTableLoadEvent;
 import net.minecraftforge.event.entity.living.LivingAttackEvent;
@@ -50,7 +51,7 @@ public final class ForgeEventSubscriber
             LOGGER.debug("caught LivingAttackEvent");
 
             // falling anvils and other impact damage, wearing full suit of tungsten carbide?
-            if (event.getSource() == DamageSource.FALL 
+            if (event.getSource().is(DamageTypes.FALL) 
                 &&
                 ArmorUtils.isPlayerWearingFullSet(player, SimpleCobaltArmorMaterial.BLUE_DRIFT_STEEL))
             {

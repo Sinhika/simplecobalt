@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 
 import mod.akkamaddi.simplecobalt.config.ConfigHolder;
 import mod.akkamaddi.simplecobalt.init.ModBlocks;
+import mod.akkamaddi.simplecobalt.init.ModCreativeTabs;
 import mod.akkamaddi.simplecobalt.init.ModItems;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModLoadingContext;
@@ -27,7 +28,8 @@ public class SimpleCobalt
         
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
-         
+        ModCreativeTabs.CREATIVE_MODE_TABS.register(modEventBus);
+        
         // Register Configs
         modLoadingContext.registerConfig(ModConfig.Type.COMMON, ConfigHolder.SERVER_SPEC);
         modLoadingContext.registerConfig(ModConfig.Type.CLIENT, ConfigHolder.CLIENT_SPEC);

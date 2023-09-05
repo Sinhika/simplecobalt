@@ -5,7 +5,7 @@ import java.util.function.Supplier;
 import mod.akkamaddi.simplecobalt.init.ModItems;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.item.ArmorItem.Type;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.api.distmarker.Dist;
@@ -53,16 +53,17 @@ public enum SimpleCobaltArmorMaterial implements ArmorMaterial
         this.repairMaterial = Lazy.of(repairMaterial);
     }
 
+
     @Override
-    public int getDurabilityForSlot(EquipmentSlot slotIn)
+	public int getDurabilityForType(Type pType)
     {
-        return MAX_DAMAGE_ARRAY[slotIn.getIndex()] * this.maxDamageFactor;
+        return MAX_DAMAGE_ARRAY[pType.getSlot().getIndex()] * this.maxDamageFactor;
     }
 
     @Override
-    public int getDefenseForSlot(EquipmentSlot slotIn)
+    public int getDefenseForType(Type pType) 
     {
-        return this.damageReductionAmountArray[slotIn.getIndex()];
+        return this.damageReductionAmountArray[pType.getSlot().getIndex()];
     }
 
     @Override
