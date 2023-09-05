@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "misc",
         "key": {
           "X": {
             "item": "simplecobalt:blue_drift_steel_ingot"
@@ -26,7 +27,8 @@
         "result": {
           "count": 44,
           "item": "minecraft:rail"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

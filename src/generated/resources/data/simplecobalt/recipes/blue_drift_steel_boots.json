@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "equipment",
         "key": {
           "S": {
             "item": "simplecobalt:blue_drift_steel_ingot"
@@ -22,7 +23,8 @@
         ],
         "result": {
           "item": "simplecobalt:blue_drift_steel_boots"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

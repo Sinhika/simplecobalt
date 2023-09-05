@@ -81,5 +81,6 @@
         "min": 1.0
       }
     }
-  ]
+  ],
+  "random_sequence": "simplecobalt:inject/shipwreck"
 }

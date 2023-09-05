@@ -26,7 +26,8 @@
           "recipes": [
             "simplecobalt:blue_drift_steel_chestplate"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

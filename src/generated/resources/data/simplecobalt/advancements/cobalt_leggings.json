@@ -26,7 +26,8 @@
           "recipes": [
             "simplecobalt:cobalt_leggings"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

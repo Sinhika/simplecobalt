@@ -26,7 +26,8 @@
           "recipes": [
             "simplecobalt:cobalt_helmet"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

@@ -26,7 +26,8 @@
           "recipes": [
             "simplecobalt:blue_celadon_axe"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "green_celadon_ingot_from_smelting": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "simplecobalt:large_green_celadon_chunk"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "simplecobalt:green_celadon_ingot_from_smelting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "green_celadon_ingot_from_smelting",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "simplecobalt:green_celadon_ingot_from_smelting"
+    ]
+  },
+  "sends_telemetry_event": false
+}

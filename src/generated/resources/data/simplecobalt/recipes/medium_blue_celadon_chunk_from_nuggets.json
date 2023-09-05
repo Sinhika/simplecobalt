@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "S": {
       "item": "simplecobalt:blue_celadon_nugget"
@@ -11,5 +12,6 @@
   ],
   "result": {
     "item": "simplecobalt:medium_blue_celadon_chunk"
-  }
+  },
+  "show_notification": true
 }

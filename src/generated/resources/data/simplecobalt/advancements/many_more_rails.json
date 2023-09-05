@@ -26,7 +26,8 @@
           "recipes": [
             "simplecobalt:many_more_rails"
           ]
-        }
+        },
+        "sends_telemetry_event": true
       },
       "conditions": [
         {

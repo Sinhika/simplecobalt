@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "S": {
       "item": "simplecobalt:blue_celadon_ingot"
@@ -12,5 +13,6 @@
   ],
   "result": {
     "item": "simplecobalt:blue_celadon_block"
-  }
+  },
+  "show_notification": true
 }

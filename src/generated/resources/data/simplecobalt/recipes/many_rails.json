@@ -10,6 +10,7 @@
       ],
       "recipe": {
         "type": "minecraft:crafting_shaped",
+        "category": "misc",
         "key": {
           "X": {
             "tag": "forge:ingots/cobalt"
@@ -26,7 +27,8 @@
         "result": {
           "count": 24,
           "item": "minecraft:rail"
-        }
+        },
+        "show_notification": true
       }
     }
   ]

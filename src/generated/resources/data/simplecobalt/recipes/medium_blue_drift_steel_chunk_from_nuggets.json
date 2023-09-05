@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "misc",
   "key": {
     "S": {
       "item": "simplecobalt:blue_drift_steel_nugget"
@@ -11,5 +12,6 @@
   ],
   "result": {
     "item": "simplecobalt:medium_blue_drift_steel_chunk"
-  }
+  },
+  "show_notification": true
 }
